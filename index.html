@@ -11,7 +11,16 @@
 
 <body>
    <header>
-      <nav></nav>
+      <!-- ? 1) Как правильно здесь выделять nav: для верхней навигации и aside-navigation? делать 2 nav? Чекнул, что это допустимо -->
+      <nav class="navigation">
+         <!-- ? 2) Стоит ли делить navigation на left и right? подразумеваю, что это оберточный блок для выравнивания -->
+         <div class="navigation__left">
+            <div class="navigation__burger-menu"></div>
+            <!-- ? 3) Стоит ли Лого (брэнд) делать цельным блоком? Подразумеваю, что он мог бы переиспользоватьяс например в футере -->
+            <div class="logo"></div>
+         </div>
+         <div class="navigation__right"></div>
+      </nav>
    </header>
    <div class="block">
       <div class="block__element"></div>
