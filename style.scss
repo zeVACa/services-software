@@ -21,3 +21,30 @@ body {
     background-color: green;
   }
 }
+
+.container {
+  padding: 0 20px;
+
+  @include media(800) {
+    width: 200px;
+  }
+
+  @include media(1000) {
+    width: 400px;
+  }
+}
+
+.test {
+  width: 80px;
+}
+
+.navigation {
+  &__right-block {
+  }
+
+  &__item {
+  }
+
+  &__vertical-divider {
+  }
+}

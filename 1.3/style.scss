@@ -1,0 +1,25 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  //   body {
+  //     background: red;
+  //   }
+}
+
+@media (min-width: 1120px) {
+  //   body {
+  //     background: green;
+  //   }
+}
+
+// @media screen {
+//   body {
+//     width: 100px;
+//   }
+// }
