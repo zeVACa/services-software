@@ -6,6 +6,139 @@
   padding: 0;
 }
 
+body {
+  min-height: 100vh;
+  background-color: #f8f8f8;
+}
+
+.header {
+  background: #fff;
+  padding: 19px 0;
+}
+.container {
+  padding: 0 16px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+
+  & > :first-child,
+  & > :last-child {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    width: 40px;
+    height: 40px;
+    background-color: #ff3e79;
+    border-radius: 50%;
+    background-position: center center;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  &__vertical-divider {
+  }
+}
+
+* {
+  //   border: 1px solid red;
+}
+
+// .block {
+//   background: #000;
+//   height: 300px;
+//   background: url('../assets/icon-phone.svg');
+// }
+
+.icon-phone {
+  // я не понял, почему svg занимает все пространство, поэтому не стал пока следующие иконки подключать
+  background: url('../assets/icon-phone.svg') no-repeat no-repeat center center;
+  //  TODO: придумать способ, как не дублировать этот стиль с цветом
+  background-color: #ff3e79;
+  //   display: none;
+  //   border: 1px solid green;
+  //   width: 40px;
+  //   height: 40px;
+}
+.icon-message {
+  background: url('../assets/icon-message.svg') no-repeat no-repeat center center;
+  //  TODO: придумать способ, как не дублировать этот стиль с цветом
+  background-color: #ff3e79;
+  //   display: none;
+}
+.icon-profile {
+  background: url('../assets/icon-profile.svg') no-repeat no-repeat center center;
+  //  TODO: придумать способ, как не дублировать этот стиль с цветом
+  background-color: #ff3e79;
+  //   display: none;
+}
+.icon-settings {
+  background: url('../assets/icon-settings.svg') no-repeat no-repeat center center;
+  //  TODO: придумать способ, как не дублировать этот стиль с цветом
+  background-color: #ff3e79;
+  //  display: none;
+}
+
+.icon-search {
+  background: url('../assets/icon-search.svg') no-repeat no-repeat center center;
+  //  TODO: придумать способ, как не дублировать этот стиль с цветом
+  background-color: #ff3e79;
+  //  display: none;
+}
+
+.content {
+  &__img {
+    max-width: 100%;
+  }
+}
+.text {
+}
+.services {
+  &__text {
+  }
+}
+.link {
+}
+.read-more {
+}
+
+.main {
+}
+.services {
+  &__title {
+  }
+
+  &__text {
+  }
+}
+.container {
+}
+.menu {
+  list-style: none;
+  &__item {
+    //  text-decoration: none;
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+}
+.content {
+  &__img {
+  }
+}
+.text {
+}
+.link {
+}
+.read-more {
+}
+
 @media (min-width: 768px) {
   //   body {
   //     background: red;
