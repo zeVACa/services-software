@@ -6,9 +6,25 @@
   padding: 0;
 }
 
+@font-face {
+  font-family: 'TTLakes-Medium';
+  src: url('../fonts/TTLakes-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'TTLakes-Black';
+  src: url('../fonts/TTLakes-Black.ttf');
+}
+
+@font-face {
+  font-family: 'TTLakes-Bold';
+  src: url('../fonts/TTLakes-Bold.ttf');
+}
+
 body {
   min-height: 100vh;
   background-color: #f8f8f8;
+  font-family: 'TTLakes-Medium';
 }
 
 .header {
@@ -45,50 +61,26 @@ body {
   }
 }
 
-* {
-  //   border: 1px solid red;
-}
-
-// .block {
-//   background: #000;
-//   height: 300px;
-//   background: url('../assets/icon-phone.svg');
-// }
-
 .icon-phone {
-  // я не понял, почему svg занимает все пространство, поэтому не стал пока следующие иконки подключать
   background: url('../assets/icon-phone.svg') no-repeat no-repeat center center;
   //  TODO: придумать способ, как не дублировать этот стиль с цветом
   background-color: #ff3e79;
-  //   display: none;
-  //   border: 1px solid green;
-  //   width: 40px;
-  //   height: 40px;
+  display: none;
 }
 .icon-message {
-  background: url('../assets/icon-message.svg') no-repeat no-repeat center center;
-  //  TODO: придумать способ, как не дублировать этот стиль с цветом
-  background-color: #ff3e79;
-  //   display: none;
+  background: url('../assets/icon-message.svg') no-repeat no-repeat center center #ff3e79;
+  display: none;
 }
 .icon-profile {
-  background: url('../assets/icon-profile.svg') no-repeat no-repeat center center;
-  //  TODO: придумать способ, как не дублировать этот стиль с цветом
-  background-color: #ff3e79;
-  //   display: none;
+  background: url('../assets/icon-profile.svg') no-repeat no-repeat center center #ff3e79;
+  display: none;
 }
 .icon-settings {
-  background: url('../assets/icon-settings.svg') no-repeat no-repeat center center;
-  //  TODO: придумать способ, как не дублировать этот стиль с цветом
-  background-color: #ff3e79;
-  //  display: none;
+  background: url('../assets/icon-settings.svg') no-repeat no-repeat center center #ff3e79;
 }
 
 .icon-search {
-  background: url('../assets/icon-search.svg') no-repeat no-repeat center center;
-  //  TODO: придумать способ, как не дублировать этот стиль с цветом
-  background-color: #ff3e79;
-  //  display: none;
+  background: url('../assets/icon-search.svg') no-repeat no-repeat center center #ff3e79;
 }
 
 .content {
@@ -97,35 +89,97 @@ body {
   }
 }
 .text {
+  font-size: 14px;
 }
-.services {
-  &__text {
-  }
-}
+
 .link {
+  text-decoration: none;
+  font-size: 16px;
+  color: #1b1c21;
+  font-weight: 600;
 }
 .read-more {
+  display: inline-block;
+  margin: 16px 0;
+
+  &__link::before {
+    content: '';
+    display: inline-block;
+    vertical-align: text-bottom;
+    height: 100%;
+    //  border: 1px solid red;
+    background: url('../assets/icon-read-more.svg') no-repeat no-repeat center center;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
 }
 
-.main {
-}
 .services {
   &__title {
+    font-family: 'TTLakes-Bold';
+    font-size: 28px;
+    color: #1b1c21;
+    margin-top: 24px;
+    padding: 0 16px;
+    position: relative;
+  }
+
+  &__title::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: #41f6d7;
+    width: 8px;
+    border-radius: 4px;
+    height: 100%;
+    left: 0;
+    transform: translate(-4px);
   }
 
   &__text {
+    display: block;
   }
+
+  &__text:nth-child(even) {
+    display: none;
+  }
+
+  // TODO понять, почему не работают стили ниже
+  //   &__text:last-child {
+  //     display: none;
+  //   }
 }
 .container {
 }
 .menu {
   list-style: none;
+  overflow: scroll;
+  //   display: inline-block;
+  //   width: 100vw;
+  display: flex;
+  margin: 24px 0;
+
   &__item {
     //  text-decoration: none;
+    color: #7e7e82;
+    border: 2px solid transparent;
+    font-size: 16px;
+    display: inline-block;
+    padding: 8px 16px;
+    white-space: nowrap;
+  }
+
+  &__item--active {
+    margin-right: 0;
+    background-color: #fff;
+    border: 2px solid #b8ffec;
+    border-radius: 6px;
   }
 
   &__link {
-    text-decoration: none;
+    //   ? почему стиль для menu ссылок обязательно нужен стиль ниже? Мы же в html примиксовали .link
+    //  text-decoration: none;
   }
 }
 .content {
@@ -137,6 +191,19 @@ body {
 .link {
 }
 .read-more {
+}
+
+// [eeeeeeeeeeeeeeeeeeeeeeeeee
+
+.menu {
+  &__item {
+  }
+
+  &__item--active {
+  }
+
+  &__link {
+  }
 }
 
 @media (min-width: 768px) {
