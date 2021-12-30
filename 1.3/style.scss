@@ -51,10 +51,16 @@ body {
     background-color: #ff3e79;
     border-radius: 50%;
     background-position: center center;
+    transition: 0.2s ease;
   }
 
   &__item:not(:last-child) {
     margin-right: 16px;
+  }
+
+  &__item:hover {
+    background-color: darken(#ff3e79, 15%);
+    //  background-color: #fff;
   }
 
   &__vertical-divider {
@@ -63,10 +69,13 @@ body {
 
 .icon-phone {
   background: url('../assets/icon-phone.svg') no-repeat no-repeat center center;
-  //  TODO: придумать способ, как не дублировать этот стиль с цветом
-  background-color: #ff3e79;
   display: none;
 }
+
+.icon-burger {
+  background: url('../assets/icon-burger.svg') no-repeat no-repeat center center #ff3e79;
+}
+
 .icon-message {
   background: url('../assets/icon-message.svg') no-repeat no-repeat center center #ff3e79;
   display: none;
@@ -144,24 +153,16 @@ body {
   &__text:nth-child(even) {
     display: none;
   }
-
-  // TODO понять, почему не работают стили ниже
-  //   &__text:last-child {
-  //     display: none;
-  //   }
 }
 .container {
 }
 .menu {
   list-style: none;
-  overflow: scroll;
-  //   display: inline-block;
-  //   width: 100vw;
+  overflow-x: scroll;
   display: flex;
   margin: 24px 0;
 
   &__item {
-    //  text-decoration: none;
     color: #7e7e82;
     border: 2px solid transparent;
     font-size: 16px;
@@ -178,8 +179,6 @@ body {
   }
 
   &__link {
-    //   ? почему стиль для menu ссылок обязательно нужен стиль ниже? Мы же в html примиксовали .link
-    //  text-decoration: none;
   }
 }
 .content {
@@ -210,6 +209,55 @@ body {
   //   body {
   //     background: red;
   //   }
+  .container {
+    padding: 0 24px;
+  }
+
+  .services {
+    &__title {
+      padding: 0 24px;
+    }
+  }
+
+  .logo {
+    position: relative;
+  }
+
+  .logo::before {
+    content: '';
+    //  position: absolute;
+    display: inline-block;
+    vertical-align: super;
+    //  top: 50%;
+    //  transform: translate(0, -50%);
+    width: 2px;
+    height: 32px;
+    background-color: #eaeaea;
+    // ? получается расстояние от бургера до разделителя 16 + 4 = 20 - плохая практика? (сложение горизонтальных марджинов)
+    margin-left: 4px;
+    margin-right: 20px;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    &__img {
+      max-width: 360px;
+      // height: auto;
+      align-items: baseline;
+    }
+  }
+
+  .services {
+    &__description {
+      width: 312px;
+    }
+
+    &__text:nth-child(even) {
+      margin-top: 24px;
+      display: block;
+    }
+  }
 }
 
 @media (min-width: 1120px) {
