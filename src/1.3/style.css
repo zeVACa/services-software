@@ -102,7 +102,8 @@ body {
 }
 
 .content__img {
-  max-width: 100%;
+  margin-left: -16px;
+  width: 100vw;
 }
 
 .text {
@@ -132,13 +133,23 @@ body {
   margin-right: 8px;
 }
 
+.logo::after {
+  content: '';
+  display: inline-block;
+  vertical-align: super;
+  width: 2px;
+  height: 32px;
+  background-color: #eaeaea;
+  margin-left: 16px;
+}
+
 .services__title {
   font-family: 'TTLakes-Bold';
   font-size: 28px;
   color: #1b1c21;
   margin-top: 24px;
   padding: 0 16px;
-  position: relative;
+  padding-left: 0;
 }
 
 .services__title::before {
@@ -148,7 +159,7 @@ body {
   background-color: #41f6d7;
   width: 8px;
   border-radius: 4px;
-  height: 100%;
+  height: 36px;
   left: 0;
   -webkit-transform: translate(-4px);
           transform: translate(-4px);
@@ -191,8 +202,8 @@ body {
   .container {
     padding: 0 24px;
   }
-  .services__title {
-    padding: 0 24px;
+  .services__description {
+    max-width: 100%;
   }
   .logo {
     position: relative;
@@ -207,6 +218,9 @@ body {
     margin-left: 4px;
     margin-right: 20px;
   }
+  .logo::after {
+    display: none;
+  }
   .content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -214,19 +228,43 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
   }
   .content__img {
-    max-width: 360px;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
+    margin-left: 0;
+    height: 208px;
+    border-radius: 6px;
   }
   .services__description {
-    width: 312px;
+    min-width: 312px;
+    margin-right: 48px;
   }
   .services__text:nth-child(even) {
     margin-top: 24px;
     display: block;
+  }
+}
+
+@media (min-width: 1120px) {
+  .container {
+    max-width: 1158px;
+    margin: 0 auto;
+  }
+  .menu {
+    overflow-x: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .content__img {
+    height: 384px;
+  }
+  .services__description {
+    max-width: 490px;
   }
 }
 /*# sourceMappingURL=style.css.map */

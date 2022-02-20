@@ -1,0 +1,311 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'TTLakes-Medium';
+  src: url('../fonts/TTLakes-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'TTLakes-Black';
+  src: url('../fonts/TTLakes-Black.ttf');
+}
+
+@font-face {
+  font-family: 'TTLakes-Bold';
+  src: url('../fonts/TTLakes-Bold.ttf');
+}
+
+body {
+  min-height: 100vh;
+  background-color: #f8f8f8;
+  font-family: 'TTLakes-Medium';
+}
+
+.header {
+  background: #fff;
+  padding: 19px 0;
+}
+.container {
+  padding: 0 16px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+
+  & > :first-child,
+  & > :last-child {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    width: 40px;
+    height: 40px;
+    background-color: #ff3e79;
+    border-radius: 50%;
+    background-position: center center;
+    transition: 0.2s ease;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  &__item:hover {
+    background-color: darken(#ff3e79, 15%);
+  }
+
+  &__vertical-divider {
+  }
+}
+
+.icon-phone {
+  background: url('../assets/icon-phone.svg') no-repeat no-repeat center center;
+  display: none;
+}
+
+.icon-burger {
+  background: url('../assets/icon-burger.svg') no-repeat no-repeat center center #ff3e79;
+}
+
+.icon-message {
+  background: url('../assets/icon-message.svg') no-repeat no-repeat center center #ff3e79;
+  display: none;
+}
+.icon-profile {
+  background: url('../assets/icon-profile.svg') no-repeat no-repeat center center #ff3e79;
+  display: none;
+}
+.icon-settings {
+  background: url('../assets/icon-settings.svg') no-repeat no-repeat center center #ff3e79;
+}
+
+.icon-search {
+  background: url('../assets/icon-search.svg') no-repeat no-repeat center center #ff3e79;
+}
+
+.content {
+  &__img {
+    margin-left: -16px;
+    width: 100vw;
+  }
+}
+
+.text {
+  font-size: 14px;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 16px;
+  color: #1b1c21;
+  font-weight: 600;
+}
+.read-more {
+  display: inline-block;
+  margin: 16px 0;
+
+  &__link::before {
+    content: '';
+    display: inline-block;
+    vertical-align: text-bottom;
+    height: 100%;
+    //  border: 1px solid red;
+    background: url('../assets/icon-read-more.svg') no-repeat no-repeat center center;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
+}
+
+.logo::after {
+  content: '';
+  display: inline-block;
+  vertical-align: super;
+  width: 2px;
+  height: 32px;
+  background-color: #eaeaea;
+  // ? получается расстояние от бургера до разделителя 16 + 4 = 20 - плохая практика? (сложение горизонтальных марджинов)
+  margin-left: 16px;
+}
+
+.services {
+  &__title {
+    font-family: 'TTLakes-Bold';
+    font-size: 28px;
+    color: #1b1c21;
+    margin-top: 24px;
+    padding: 0 16px;
+    padding-left: 0;
+    // position: relative;
+  }
+
+  &__title::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: #41f6d7;
+    width: 8px;
+    border-radius: 4px;
+    height: 36px;
+    left: 0;
+    transform: translate(-4px);
+  }
+
+  &__text {
+    display: block;
+  }
+
+  &__text:nth-child(even) {
+    display: none;
+  }
+}
+
+.menu {
+  list-style: none;
+  overflow-x: scroll;
+  display: flex;
+  margin: 24px 0;
+
+  &__item {
+    color: #7e7e82;
+    border: 2px solid transparent;
+    font-size: 16px;
+    display: inline-block;
+    padding: 8px 16px;
+    white-space: nowrap;
+  }
+
+  &__item--active {
+    margin-right: 0;
+    background-color: #fff;
+    border: 2px solid #b8ffec;
+    border-radius: 6px;
+  }
+
+  &__link {
+  }
+}
+.content {
+  &__img {
+  }
+}
+.text {
+}
+.link {
+}
+.read-more {
+}
+
+.menu {
+  &__item {
+  }
+
+  &__item--active {
+  }
+
+  &__link {
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+
+  .services {
+    &__title {
+      // padding: 0 24px;
+    }
+
+    &__description {
+      max-width: 100%;
+    }
+  }
+
+  .logo {
+    position: relative;
+  }
+
+  .logo::before {
+    content: '';
+    display: inline-block;
+    vertical-align: super;
+    width: 2px;
+    height: 32px;
+    background-color: #eaeaea;
+    // ? получается расстояние от бургера до разделителя 16 + 4 = 20 - плохая практика? (сложение горизонтальных марджинов)
+    margin-left: 4px;
+    margin-right: 20px;
+  }
+
+  .logo::after {
+    display: none;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
+    &__img {
+      margin-left: 0;
+      // width: 40px;
+      height: 208px;
+      // max-width: 360px;
+      // max-width: 360px;
+      // max-height: 208px;
+      // min-height: 260px;
+      // max-width: 550px;
+      border-radius: 6px;
+    }
+  }
+
+  .services {
+    &__description {
+      // max-width: 312px;
+      min-width: 312px;
+      margin-right: 48px;
+    }
+
+    &__text:nth-child(even) {
+      margin-top: 24px;
+      display: block;
+    }
+  }
+}
+
+@media (min-width: 1120px) {
+  .container {
+    max-width: 1158px;
+    margin: 0 auto;
+  }
+
+  .menu {
+    overflow-x: hidden;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .content {
+    &__img {
+      // max-width: 532px;
+      height: 384px;
+      // min-height: auto;
+      // align-self: flex-start;
+    }
+  }
+
+  .services {
+    &__description {
+      max-width: 490px;
+    }
+  }
+}
