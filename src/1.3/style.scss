@@ -117,7 +117,6 @@ body {
     display: inline-block;
     vertical-align: text-bottom;
     height: 100%;
-    //  border: 1px solid red;
     background: url('../assets/icon-read-more.svg') no-repeat no-repeat center center;
     width: 24px;
     height: 24px;
@@ -144,7 +143,6 @@ body {
     margin-top: 24px;
     padding: 0 16px;
     padding-left: 0;
-    // position: relative;
   }
 
   &__title::before {
@@ -189,30 +187,6 @@ body {
     border: 2px solid #b8ffec;
     border-radius: 6px;
   }
-
-  &__link {
-  }
-}
-.content {
-  &__img {
-  }
-}
-.text {
-}
-.link {
-}
-.read-more {
-}
-
-.menu {
-  &__item {
-  }
-
-  &__item--active {
-  }
-
-  &__link {
-  }
 }
 
 @media (min-width: 768px) {
@@ -221,10 +195,6 @@ body {
   }
 
   .services {
-    &__title {
-      // padding: 0 24px;
-    }
-
     &__description {
       max-width: 100%;
     }
@@ -257,13 +227,7 @@ body {
 
     &__img {
       margin-left: 0;
-      // width: 40px;
       height: 208px;
-      // max-width: 360px;
-      // max-width: 360px;
-      // max-height: 208px;
-      // min-height: 260px;
-      // max-width: 550px;
       border-radius: 6px;
     }
   }
@@ -296,10 +260,7 @@ body {
 
   .content {
     &__img {
-      // max-width: 532px;
       height: 384px;
-      // min-height: auto;
-      // align-self: flex-start;
     }
   }
 
