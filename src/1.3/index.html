@@ -32,7 +32,22 @@
    <main class="main">
       <div class="services">
          <div class="container">
-            <h1 class="services__title">Услуги и сервисы</h1>
+            <!-- ? не уверен насчет названия .services__content, ткк там есть одновременно и заголовок, и элемент навигации -->
+            <div class="services__content">
+               <h1 class="services__title">Услуги и сервисы</h1>
+               <div class="services__navigation">
+                  <!-- ! изменить имя с item на что-то более характерное -->
+                  <div class="item">
+                     <!-- ? элемент ниже не относится к navigation, но пока не понял, как не дублировать для этих иконок одинаковый css -->
+                     <p class="navigation-label">Оставить заявку</p>
+                     <div class="navigation__item icon-settings"></div>
+                  </div>
+                  <div class="item">
+                     <p class="navigation-label">Оставить заявку</p>
+                     <div class="navigation__item icon-search"></div>
+                  </div>
+               </div>
+            </div>
             <!-- не придумал, как назвать, это вроде не совсем меню -->
             <ul class="menu">
                <li class="menu__item menu__item--active">Ремонтируемые бренды</li>

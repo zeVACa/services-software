@@ -61,9 +61,6 @@ body {
   &__item:hover {
     background-color: darken(#ff3e79, 15%);
   }
-
-  &__vertical-divider {
-  }
 }
 
 .icon-phone {
@@ -100,6 +97,10 @@ body {
 
 .text {
   font-size: 14px;
+}
+
+.services__navigation {
+  display: none;
 }
 
 .link {
@@ -140,7 +141,6 @@ body {
     font-family: 'TTLakes-Bold';
     font-size: 28px;
     color: #1b1c21;
-    margin-top: 24px;
     padding: 0 16px;
     padding-left: 0;
   }
@@ -190,6 +190,38 @@ body {
 }
 
 @media (min-width: 768px) {
+  .navigation__item {
+    background-color: #ff3e79;
+  }
+  .icon-phone,
+  .icon-message,
+  .icon-profile {
+    display: inline-block;
+  }
+
+  .navigation__item {
+    display: inline-block;
+  }
+
+  .icon-settings {
+    margin-left: 24px;
+    display: inline-block;
+  }
+
+  .icon-settings::before {
+    content: '';
+    display: inline-block;
+    vertical-align: super;
+    width: 2px;
+    height: 32px;
+    background-color: #eaeaea;
+    // ? не понял, почему стиль ниже не работает. Почему поведение этого псевдоэелемента отличается от .logo::before Хотя оба inline-block
+    // margin: 0 20px;
+    // ? пришлось .icon-settings задавать марджин не до псевдоэлемента, а до другой иконки
+    margin-left: -20px;
+    margin-top: 4px;
+  }
+
   .container {
     padding: 0 24px;
   }
@@ -198,10 +230,6 @@ body {
     &__description {
       max-width: 100%;
     }
-  }
-
-  .logo {
-    position: relative;
   }
 
   .logo::before {
@@ -234,7 +262,6 @@ body {
 
   .services {
     &__description {
-      // max-width: 312px;
       min-width: 312px;
       margin-right: 48px;
     }
@@ -250,6 +277,42 @@ body {
   .container {
     max-width: 1158px;
     margin: 0 auto;
+  }
+
+  .header {
+    // ? не уверен, что это правильный вариант скрывать навигацию и вместе с h1 ставить "оставить заявку" и "статус ремонта"
+    display: none;
+  }
+
+  .icon-settings::before {
+    display: none;
+  }
+
+  .icon-settings {
+    margin-left: 0;
+  }
+
+  // ! код ниже мне не нравится в плане нейминга и вложенности самих элементов, но покаа как исправить не понимаю
+
+  .services__content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+  }
+
+  .services__navigation {
+    display: flex;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 32px;
+  }
+
+  .navigation-label {
+    margin-right: 9px;
   }
 
   .menu {
