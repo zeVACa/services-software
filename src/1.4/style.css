@@ -9,20 +9,27 @@
 
 @font-face {
   font-family: 'TTLakes-Medium';
-  src: url("../fonts/TTLakes-Medium.ttf");
+  src: url("../../fonts/TTLakes-Medium.ttf");
 }
 
 @font-face {
   font-family: 'TTLakes-Black';
-  src: url("../fonts/TTLakes-Black.ttf");
+  src: url("../../fonts/TTLakes-Black.ttf");
 }
 
 @font-face {
   font-family: 'TTLakes-Bold';
-  src: url("../fonts/TTLakes-Bold.ttf");
+  src: url("../../fonts/TTLakes-Bold.ttf");
 }
 
-.side-menu {
+.body {
+  min-height: 100vh;
+  background-color: #f8f8f8;
+  font-family: 'TTLakes-Medium';
+  letter-spacing: -0.2px;
+}
+
+.sidebar {
   position: fixed;
   background-color: #fff;
   width: 320px;
@@ -39,17 +46,130 @@
           flex-direction: column;
 }
 
-.red {
-  width: 100%;
-  height: 100px;
-  background-color: red;
+.sidebar__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.icon-close {
+  margin-right: 16px;
+}
+
+.icon-search-sidebar {
+  margin-left: auto;
+}
+
+.icon-close {
+  background: url("../../assets/icon-close.svg") no-repeat no-repeat center center #ff3e79;
+}
+
+.icon-search-sidebar {
+  background: url("../../assets/icon-search-sidebar.svg") no-repeat no-repeat center center #ff3e79;
+}
+
+.menu {
+  list-style: none;
   margin-top: 46px;
 }
 
-.blue {
-  width: 100%;
-  height: 100px;
-  background-color: blue;
+.menu__link {
+  text-decoration: none;
+  color: #1b1c21;
+  font-size: 16px;
+  font-family: 'TTLakes-Medium';
+  display: inline-block;
+  padding: 6px 0;
+  margin-bottom: 20px;
+}
+
+.menu__link:hover,
+.menu__link--active {
+  color: #7e7e82;
+}
+
+.round-button--red {
+  width: 40px;
+  height: 40px;
+  background-color: #ff3e79;
+  border-radius: 50%;
+  background-position: center center;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+  margin-right: 16px;
+}
+
+.round-button--red:hover {
+  background-color: #f1004a;
+}
+
+.icon-phone {
+  background: url("../../assets/icon-phone.svg") no-repeat no-repeat center center #ff3e79;
+}
+
+.icon-message {
+  background: url("../../assets/icon-message.svg") no-repeat no-repeat center center #ff3e79;
+}
+
+.icon-profile {
+  background: url("../../assets/icon-profile.svg") no-repeat no-repeat center center #ff3e79;
+}
+
+.sidebar__footer {
   margin-top: auto;
+}
+
+.sidebar__footer .contacts__buttons-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sidebar__footer .contacts__mail-link, .sidebar__footer .contacts__phone-link {
+  display: block;
+  font-family: 'TTLakes-Medium';
+  font-size: 16px;
+  text-decoration: none;
+  color: #1b1c21;
+}
+
+.sidebar__footer .contacts__mail-link:hover, .sidebar__footer .contacts__phone-link:hover {
+  cursor: pointer;
+  color: #7e7e82;
+}
+
+.sidebar__footer .contacts__mail-link {
+  margin-top: 16px;
+}
+
+.sidebar__footer .contacts__phone-link {
+  font-size: 24px;
+  margin-top: 12px;
+  font-family: 'TTLakes-Bold';
+  letter-spacing: -0.6px;
+}
+
+.sidebar__footer .languages {
+  margin-top: 40px;
+}
+
+.sidebar__footer .languages__button {
+  border: none;
+  margin-right: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  background: none;
+}
+
+.sidebar__footer .languages__button--active {
+  color: #7e7e82;
+  color: #1b1c21;
 }
 /*# sourceMappingURL=style.css.map */

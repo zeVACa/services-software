@@ -10,12 +10,40 @@
 </head>
 
 <body>
-   <div class="side-menu">
-      <div class="side-menu__header">
-         <img src="../assets/logo.svg" alt="logo">
+   <div class="sidebar">
+      <div class="sidebar__header">
+         <div class="round-button--red icon-close"></div>
+         <img src="../../assets/logo.svg" alt="logo">
+         <div class="round-button--red icon-search-sidebar"></div>
       </div>
-      <div class="red"></div>
-      <div class="blue"></div>
+      <nav>
+         <ul class="menu">
+            <li><a href="#" class="menu__link menu__link--active">Ремонт техники</a></li>
+            <li><a href="#" class="menu__link">Услуги и сервисы</a></li>
+            <li><a href="#" class="menu__link">Корпоративным клиентам</a></li>
+            <li><a href="#" class="menu__link">Продавцам техники</a></li>
+            <li><a href="#" class="menu__link">Партнерам</a></li>
+            <li><a href="#" class="menu__link">Производителям</a></li>
+            <li><a href="#" class="menu__link">Наши сервисные центры</a></li>
+            <li><a href="#" class="menu__link">Контанты</a></li>
+         </ul>
+      </nav>
+      <div class="sidebar__footer">
+         <div class="contacts">
+            <div class="contacts__buttons-row">
+               <div class="round-button--red icon-phone"></div>
+               <div class="round-button--red icon-message"></div>
+               <div class="round-button--red icon-profile"></div>
+            </div>
+            <a class="contacts__mail-link" href="mailto:mail@cps.com">mail@cps.com</a>
+            <a class="contacts__phone-link" href="tel:+78008908900">8 800 890 8900</a>
+         </div>
+         <div class="languages">
+            <input type="button" value="RU" class="languages__button languages__button--active">
+            <input type="button" value="EN" class="languages__button">
+            <input type="button" value="CH" class="languages__button">
+         </div>
+      </div>
    </div>
 </body>
 
