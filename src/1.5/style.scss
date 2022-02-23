@@ -1,0 +1,87 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'TTLakes-Medium';
+  src: url('../../fonts/TTLakes-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'TTLakes-Black';
+  src: url('../../fonts/TTLakes-Black.ttf');
+}
+
+@font-face {
+  font-family: 'TTLakes-Bold';
+  src: url('../../fonts/TTLakes-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'TTLakes-Thin';
+  src: url('../../fonts/TTLakes-Thin.ttf');
+}
+
+.body {
+  font-family: 'TTLakes-Thin';
+  background-color: #f8f8f8;
+  font-size: 16px;
+  letter-spacing: -0.2px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.section-title {
+  //   color: #7e7e82;
+  text-transform: uppercase;
+  padding: 16px 0;
+}
+
+.background-for-section-title {
+  background-color: #fff;
+}
+
+.brands {
+  display: flex;
+  overflow: hidden;
+  margin-top: 16px;
+
+  &__card-item {
+    min-width: 300px;
+    padding: 20px 16px;
+    border: 1px solid #eaeaea;
+    background-color: #fff;
+    margin-right: 16px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.check-partner-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 2px solid #ff3e79;
+}
+
+.check-partner-button::before {
+  content: '';
+  display: block;
+  height: 10px;
+  width: 10px;
+  background-color: red;
+}
+
+.first {
+  //   flex-basis: 300px;
+}
