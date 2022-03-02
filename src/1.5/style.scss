@@ -34,7 +34,7 @@
 }
 
 .container {
-  max-width: 960px;
+  padding: 0 16px;
   margin: 0 auto;
 }
 
@@ -50,7 +50,7 @@
 
 .brands {
   display: flex;
-  overflow: hidden;
+  overflow-x: auto;
   margin-top: 16px;
 
   &__card-item {
@@ -72,16 +72,40 @@
   width: 40px;
   border-radius: 50%;
   border: 2px solid #ff3e79;
+  position: relative;
+}
+
+.check-partner-button::before,
+.check-partner-button::after {
+  content: '';
+  display: block;
+  height: 8px;
+  width: 2px;
+  background-color: #ff3e79;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 5px;
 }
 
 .check-partner-button::before {
-  content: '';
-  display: block;
-  height: 10px;
-  width: 10px;
-  background-color: red;
+  transform: translate(-50%, calc(-50% + -2.5px)) rotate(-45deg);
 }
 
-.first {
-  //   flex-basis: 300px;
+.check-partner-button::after {
+  transform: translate(-50%, calc(-50% + 2px)) rotate(45deg);
+}
+
+@media (min-width: 768px) {
+  // не уверен, что контейнер нужно сужать подобным способом, возможно он должен быть эластичным? (вместе с контентом)
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 1120px) {
+  // не уверен, что контейнер нужно сужать подобным способом, возможно он должен быть эластичным? (вместе с контентом)
+  .container {
+    max-width: 1054px;
+  }
 }
