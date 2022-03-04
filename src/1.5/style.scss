@@ -36,6 +36,7 @@
 .container {
   padding: 0 16px;
   margin: 0 auto;
+  border: 1px solid red;
 }
 
 .section-title {
@@ -49,16 +50,16 @@
 }
 
 .brands {
-  display: flex;
+  display: none;
   overflow-x: auto;
   margin-top: 16px;
 
   &__card-item {
-    min-width: 300px;
+    width: 240px;
     padding: 20px 16px;
     border: 1px solid #eaeaea;
     background-color: #fff;
-    margin-right: 16px;
+    // margin-right: 16px;
     border-radius: 6px;
     display: flex;
     flex-direction: row;
@@ -96,16 +97,78 @@
   transform: translate(-50%, calc(-50% + 2px)) rotate(45deg);
 }
 
+// не нашел способа, как сделать, чтобы были видны несколько карточек, но при этом было бы номральное переключение
+
+.mySwiper {
+  position: relative;
+  overflow-x: hidden !important;
+  overflow-y: visible !important;
+  height: 101px;
+  margin-top: 16px;
+}
+
+.swiper-slide {
+  height: 80px !important;
+}
+
+.swiper-pagination {
+  top: 85px;
+}
+
+// нужно ли создавать подобные классы, чтобы показывать конент на определенных разрешениях?
+
+// .mobile {
+//   display: block;
+// }
+
+// .tablet {
+//   display: none;
+// }
+
 @media (min-width: 768px) {
   // не уверен, что контейнер нужно сужать подобным способом, возможно он должен быть эластичным? (вместе с контентом)
   .container {
     max-width: 720px;
   }
+
+  .brands {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__card-item {
+      width: 31%;
+      margin-bottom: 16px;
+    }
+  }
+
+  .mobile-only {
+    display: none;
+  }
 }
 
 @media (min-width: 1120px) {
-  // не уверен, что контейнер нужно сужать подобным способом, возможно он должен быть эластичным? (вместе с контентом)
   .container {
     max-width: 1054px;
+  }
+
+  .brands {
+    // 1 способ подсказал парень из чата, что 3 гэпа по 2% => 94 / 4 = 23.5% не очень удобно считать каждый раз. Гридом похоже проще, надо изучить
+    justify-content: flex-start;
+    gap: 2%;
+
+    // 2 способ (тоже подсказал парень из чата)
+    // display: grid;
+    // grid-template-columns: repeat(4, 1fr);
+    // column-gap: 16px;
+    // row-gap: 16px;
+
+    &__card-item {
+      // 1 способ
+      width: 23.5%;
+      //  2 способ
+      // width: 100%;
+      // margin-bottom: 16px;
+    }
   }
 }
