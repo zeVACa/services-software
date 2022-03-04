@@ -36,7 +36,6 @@
 .container {
   padding: 0 16px;
   margin: 0 auto;
-  border: 1px solid red;
 }
 
 .section-title {
@@ -115,6 +114,10 @@
   top: 85px;
 }
 
+.collapse-button {
+  display: none;
+}
+
 // нужно ли создавать подобные классы, чтобы показывать конент на определенных разрешениях?
 
 // .mobile {
@@ -134,12 +137,33 @@
   .brands {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 2%;
 
     &__card-item {
-      width: 31%;
+      width: 32%;
       margin-bottom: 16px;
     }
+  }
+
+  .collapse-button {
+    display: block;
+    margin-top: 8px;
+    position: relative;
+    padding-left: 20px;
+    font-family: 'TTLakes-Medium';
+    font-size: 16px;
+  }
+
+  .collapse-button::before {
+    content: '';
+    position: absolute;
+    // не уверен, что это правильный способ выравнивания псевдоэлемента
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    background: url('../../assets/icon-read-more.svg');
   }
 
   .mobile-only {
@@ -153,7 +177,7 @@
   }
 
   .brands {
-    // 1 способ подсказал парень из чата, что 3 гэпа по 2% => 94 / 4 = 23.5% не очень удобно считать каждый раз. Гридом похоже проще, надо изучить
+    // 1 способ подсказал парень из чата, что 3 гэпа по 2% => 94 / 4 = 23.5% не очень удобно считать каждый раз. Гридом похоже проще. С ними не работал, но походу надо изучить
     justify-content: flex-start;
     gap: 2%;
 

@@ -37,7 +37,6 @@
 .container {
   padding: 0 16px;
   margin: 0 auto;
-  border: 1px solid red;
 }
 
 .section-title {
@@ -123,6 +122,10 @@
   top: 85px;
 }
 
+.collapse-button {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .container {
     max-width: 720px;
@@ -133,13 +136,31 @@
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    gap: 2%;
   }
   .brands__card-item {
-    width: 31%;
+    width: 32%;
     margin-bottom: 16px;
+  }
+  .collapse-button {
+    display: block;
+    margin-top: 8px;
+    position: relative;
+    padding-left: 20px;
+    font-family: 'TTLakes-Medium';
+    font-size: 16px;
+  }
+  .collapse-button::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    background: url("../../assets/icon-read-more.svg");
   }
   .mobile-only {
     display: none;
