@@ -68,11 +68,11 @@
 }
 
 .icon-close {
-  background: url("../../assets/icon-close.svg") no-repeat no-repeat center center #ff3e79;
+  background: url("../../assets/icons/icon-close.svg") no-repeat no-repeat center center #ff3e79;
 }
 
 .icon-search-sidebar {
-  background: url("../../assets/icon-search-sidebar.svg") no-repeat no-repeat center center #ff3e79;
+  background: url("../../assets/icons/icon-search-sidebar.svg") no-repeat no-repeat center center #ff3e79;
 }
 
 .menu {
@@ -111,15 +111,15 @@
 }
 
 .icon-phone {
-  background: url("../../assets/icon-phone.svg") no-repeat no-repeat center center #ff3e79;
+  background: url("../../assets/icons/icon-phone.svg") no-repeat no-repeat center center #ff3e79;
 }
 
 .icon-message {
-  background: url("../../assets/icon-message.svg") no-repeat no-repeat center center #ff3e79;
+  background: url("../../assets/icons/icon-message.svg") no-repeat no-repeat center center #ff3e79;
 }
 
 .icon-profile {
-  background: url("../../assets/icon-profile.svg") no-repeat no-repeat center center #ff3e79;
+  background: url("../../assets/icons/icon-profile.svg") no-repeat no-repeat center center #ff3e79;
 }
 
 .sidebar__footer {
