@@ -8,17 +8,17 @@
 
 @font-face {
   font-family: 'TTLakes-Medium';
-  src: url('../fonts/TTLakes-Medium.ttf');
+  src: url('../../fonts/TTLakes-Medium.ttf');
 }
 
 @font-face {
   font-family: 'TTLakes-Black';
-  src: url('../fonts/TTLakes-Black.ttf');
+  src: url('../../fonts/TTLakes-Black.ttf');
 }
 
 @font-face {
   font-family: 'TTLakes-Bold';
-  src: url('../fonts/TTLakes-Bold.ttf');
+  src: url('../../fonts/TTLakes-Bold.ttf');
 }
 
 body {
@@ -64,28 +64,29 @@ body {
 }
 
 .icon-phone {
-  background: url('../assets/icon-phone.svg') no-repeat no-repeat center center;
+  background: url('../../assets/icons/icon-phone.svg') no-repeat no-repeat center center;
   display: none;
 }
 
 .icon-burger {
-  background: url('../assets/icon-burger.svg') no-repeat no-repeat center center #ff3e79;
+  background: url('../../assets/icons/icon-burger.svg') no-repeat no-repeat center center #ff3e79;
+  // background: url('../assets/icon-burger.svg') no-repeat no-repeat center center #ff3e79;
 }
 
 .icon-message {
-  background: url('../assets/icon-message.svg') no-repeat no-repeat center center #ff3e79;
+  background: url('../../assets/icons/icon-message.svg') no-repeat no-repeat center center #ff3e79;
   display: none;
 }
 .icon-profile {
-  background: url('../assets/icon-profile.svg') no-repeat no-repeat center center #ff3e79;
+  background: url('../../assets/icons/icon-profile.svg') no-repeat no-repeat center center #ff3e79;
   display: none;
 }
 .icon-settings {
-  background: url('../assets/icon-settings.svg') no-repeat no-repeat center center #ff3e79;
+  background: url('../../assets/icons/icon-settings.svg') no-repeat no-repeat center center #ff3e79;
 }
 
 .icon-search {
-  background: url('../assets/icon-search.svg') no-repeat no-repeat center center #ff3e79;
+  background: url('../../assets/icons/icon-search.svg') no-repeat no-repeat center center #ff3e79;
 }
 
 .content {
@@ -118,7 +119,8 @@ body {
     display: inline-block;
     vertical-align: text-bottom;
     height: 100%;
-    background: url('../assets/icon-read-more.svg') no-repeat no-repeat center center;
+    background: url('../../assets/icons/icon-read-more.svg') no-repeat no-repeat center center;
+    transform: rotate(180deg);
     width: 24px;
     height: 24px;
     margin-right: 8px;
