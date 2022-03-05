@@ -126,6 +126,12 @@
   display: none;
 }
 
+.cards-area {
+  border: 1px solid red;
+  width: 100%;
+  min-height: 100px;
+}
+
 @media (min-width: 768px) {
   .container {
     max-width: 720px;
@@ -160,7 +166,7 @@
     left: 5px;
     width: 10px;
     height: 10px;
-    background: url("../../assets/icon-read-more.svg");
+    background: url("../../assets/icons/icon-read-more.svg");
   }
   .mobile-only {
     display: none;
