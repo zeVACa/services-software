@@ -128,12 +128,6 @@
 //   display: none;
 // }
 
-.cards-area {
-  border: 1px solid red;
-  width: 100%;
-  min-height: 100px;
-}
-
 @media (min-width: 768px) {
   // не уверен, что контейнер нужно сужать подобным способом, возможно он должен быть эластичным? (вместе с контентом)
   .container {
@@ -169,7 +163,17 @@
     left: 5px;
     width: 10px;
     height: 10px;
-    background: url('../../assets/icons/icon-read-more.svg');
+    background: url('../../assets/icons/icon-read-more.svg') no-repeat;
+  }
+
+  .collapse-button:hover {
+    cursor: pointer;
+  }
+
+  .collapse-button.content-is-collapsed::before {
+    // сам svg немного обрезан, хотя экспортился норм. Кончики нижней стрелки почему-то обрезаны
+    top: 7px;
+    transform: rotate(180deg);
   }
 
   .mobile-only {

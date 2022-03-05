@@ -126,12 +126,6 @@
   display: none;
 }
 
-.cards-area {
-  border: 1px solid red;
-  width: 100%;
-  min-height: 100px;
-}
-
 @media (min-width: 768px) {
   .container {
     max-width: 720px;
@@ -166,7 +160,15 @@
     left: 5px;
     width: 10px;
     height: 10px;
-    background: url("../../assets/icons/icon-read-more.svg");
+    background: url("../../assets/icons/icon-read-more.svg") no-repeat;
+  }
+  .collapse-button:hover {
+    cursor: pointer;
+  }
+  .collapse-button.content-is-collapsed::before {
+    top: 7px;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
   }
   .mobile-only {
     display: none;
