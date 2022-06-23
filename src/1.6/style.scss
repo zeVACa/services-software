@@ -29,7 +29,9 @@
 }
 
 .sidebar {
-  position: fixed;
+  position: sticky;
+  top: 0;
+  // float: left;
   background-color: #fff;
   width: 320px;
   height: 100vh;
@@ -175,6 +177,10 @@
 }
 .container {
   padding: 0 16px;
+}
+
+.body {
+  display: flex;
 }
 
 .navigation {
@@ -323,9 +329,16 @@
     display: inline-block;
     padding: 8px 16px;
     white-space: nowrap;
+    
   }
 
-  &__item--active {
+  &__item:not(:first-child),
+  &__item:not(:last-child) {
+    margin-left: 15px;
+  }
+
+  &__item--active,
+  &__item:hover {
     margin-right: 0;
     background-color: #fff;
     border: 2px solid #b8ffec;
@@ -394,8 +407,10 @@
 
   .content {
     display: flex;
-    justify-content: space-between;
-    align-items: stretch;
+    justify-content: center;
+    // align-items: stretch;
+    margin: 0 auto;
+
 
     &__img {
       margin-left: 0;
@@ -403,6 +418,8 @@
       border-radius: 6px;
     }
   }
+
+  
 
   .services {
     &__description {
@@ -424,7 +441,6 @@
   }
 
   .header {
-    // ? не уверен, что это правильный вариант скрывать навигацию и вместе с h1 ставить "оставить заявку" и "статус ремонта"
     display: none;
   }
 
@@ -441,7 +457,7 @@
   .services__content {
     display: flex;
     justify-content: space-between;
-    margin-top: 24px;
+    // margin-top: 24px;
   }
 
   .services__navigation {
