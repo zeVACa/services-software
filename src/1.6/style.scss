@@ -1,0 +1,479 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'TTLakes-Medium';
+  src: url('../../fonts/TTLakes-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'TTLakes-Black';
+  src: url('../../fonts/TTLakes-Black.ttf');
+}
+
+@font-face {
+  font-family: 'TTLakes-Bold';
+  src: url('../../fonts/TTLakes-Bold.ttf');
+}
+
+.body {
+  min-height: 100vh;
+  background-color: #f8f8f8;
+  font-family: 'TTLakes-Medium';
+  letter-spacing: -0.2px;
+}
+
+.sidebar {
+  position: fixed;
+  background-color: #fff;
+  width: 320px;
+  height: 100vh;
+  padding: 19px 24px 32px;
+  box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar__header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.icon-close {
+  margin-right: 16px;
+}
+
+.icon-search-sidebar {
+  margin-left: auto;
+}
+
+.icon-close {
+  background: url('../../assets/icons/icon-close.svg') no-repeat no-repeat center center #ff3e79;
+}
+
+.icon-search-sidebar {
+  background: url('../../assets/icons/icon-search-sidebar.svg') no-repeat no-repeat center center
+    #ff3e79;
+}
+
+.menu {
+  list-style: none;
+  margin-top: 46px;
+}
+
+.menu__link {
+  text-decoration: none;
+  color: #1b1c21;
+  font-size: 16px;
+  font-family: 'TTLakes-Medium';
+  display: inline-block;
+  padding: 6px 0;
+  margin-bottom: 20px;
+}
+
+.menu__link:hover,
+.menu__link--active {
+  color: #7e7e82;
+}
+
+.round-button--red {
+  width: 40px;
+  height: 40px;
+  background-color: #ff3e79;
+  border-radius: 50%;
+  background-position: center center;
+  transition: 0.2s ease;
+  margin-right: 16px;
+}
+
+.round-button--red:hover {
+  background-color: darken(#ff3e79, 15%);
+}
+
+.icon-phone {
+  background: url('../../assets/icons/icon-phone.svg') no-repeat no-repeat center center #ff3e79;
+}
+
+.icon-message {
+  background: url('../../assets/icons/icon-message.svg') no-repeat no-repeat center center #ff3e79;
+}
+
+.icon-profile {
+  background: url('../../assets/icons/icon-profile.svg') no-repeat no-repeat center center #ff3e79;
+}
+
+.sidebar {
+  &__footer {
+    margin-top: auto;
+  }
+}
+
+.sidebar__footer {
+  .contacts {
+    &__buttons-row {
+      // ткк при .round-button--red inline-block появлется пробел, который нужно комментировать в html - не оч красиво https://ru.stackoverflow.com/questions/609992/%D0%9E%D1%82%D1%81%D1%82%D1%83%D0%BF%D1%8B-%D0%BC%D0%B5%D0%B6%D0%B4%D1%83-%D0%B8%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD%D0%BE%D0%B2%D1%8B%D0%BC%D0%B8-%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D0%BC%D0%B8
+      display: flex;
+    }
+
+    &__mail-link,
+    &__phone-link {
+      // не уверен, что корректно задавать для <a> display: block. Мне кажется, что лучше бы было бы выбрать блочную текст-обертку и оборачивать её в <a>, но, как мне показалось, <p> <h1-h6> не очень подходят в плане семантики
+      display: block;
+      font-family: 'TTLakes-Medium';
+      font-size: 16px;
+      text-decoration: none;
+      color: #1b1c21;
+    }
+
+    &__mail-link:hover,
+    &__phone-link:hover {
+      cursor: pointer;
+      color: #7e7e82;
+    }
+
+    &__mail-link {
+      margin-top: 16px;
+    }
+
+    &__phone-link {
+      font-size: 24px;
+      margin-top: 12px;
+      font-family: 'TTLakes-Bold';
+      letter-spacing: -0.6px;
+    }
+  }
+
+  .languages {
+    margin-top: 40px;
+    &__button {
+      border: none;
+      margin-right: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      background: none;
+    }
+
+    &__button--active {
+      color: #7e7e82;
+      color: #1b1c21;
+    }
+  }
+}
+
+// 1.3
+
+.header {
+  background: #fff;
+  padding: 19px 0;
+}
+.container {
+  padding: 0 16px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+
+  & > :first-child,
+  & > :last-child {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    width: 40px;
+    height: 40px;
+    background-color: #ff3e79;
+    border-radius: 50%;
+    background-position: center center;
+    transition: 0.2s ease;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  &__item:hover {
+    background-color: darken(#ff3e79, 15%);
+  }
+}
+
+.icon-phone {
+  background: url('../../assets/icons/icon-phone.svg') no-repeat no-repeat center center;
+  display: none;
+}
+
+.icon-burger {
+  background: url('../../assets/icons/icon-burger.svg') no-repeat no-repeat center center #ff3e79;
+  // background: url('../assets/icon-burger.svg') no-repeat no-repeat center center #ff3e79;
+}
+
+.icon-message {
+  background: url('../../assets/icons/icon-message.svg') no-repeat no-repeat center center #ff3e79;
+  display: none;
+}
+.icon-profile {
+  background: url('../../assets/icons/icon-profile.svg') no-repeat no-repeat center center #ff3e79;
+  display: none;
+}
+.icon-settings {
+  background: url('../../assets/icons/icon-settings.svg') no-repeat no-repeat center center #ff3e79;
+}
+
+.icon-search {
+  background: url('../../assets/icons/icon-search.svg') no-repeat no-repeat center center #ff3e79;
+}
+
+.content {
+  &__img {
+    margin-left: -16px;
+    width: 100vw;
+  }
+}
+
+.text {
+  font-size: 14px;
+}
+
+.services__navigation {
+  display: none;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 16px;
+  color: #1b1c21;
+  font-weight: 600;
+}
+.read-more {
+  display: inline-block;
+  margin: 16px 0;
+
+  &__link::before {
+    content: '';
+    display: inline-block;
+    vertical-align: text-bottom;
+    height: 100%;
+    background: url('../../assets/icons/icon-read-more.svg') no-repeat no-repeat center center;
+    transform: rotate(180deg);
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
+}
+
+.logo::after {
+  content: '';
+  display: inline-block;
+  vertical-align: super;
+  width: 2px;
+  height: 32px;
+  background-color: #eaeaea;
+  // ? получается расстояние от бургера до разделителя 16 + 4 = 20 - плохая практика? (сложение горизонтальных марджинов)
+  margin-left: 16px;
+}
+
+.services {
+  &__title {
+    font-family: 'TTLakes-Bold';
+    font-size: 28px;
+    color: #1b1c21;
+    padding: 0 16px;
+    padding-left: 0;
+  }
+
+  &__title::before {
+    content: '';
+    display: block;
+    position: absolute;
+    background-color: #41f6d7;
+    width: 8px;
+    border-radius: 4px;
+    height: 36px;
+    left: 0;
+    transform: translate(-4px);
+  }
+
+  &__text {
+    display: block;
+  }
+
+  &__text:nth-child(even) {
+    display: none;
+  }
+}
+
+.menu {
+  list-style: none;
+  overflow-x: scroll;
+  display: flex;
+  margin: 24px 0;
+
+  &__item {
+    color: #7e7e82;
+    border: 2px solid transparent;
+    font-size: 16px;
+    display: inline-block;
+    padding: 8px 16px;
+    white-space: nowrap;
+  }
+
+  &__item--active {
+    margin-right: 0;
+    background-color: #fff;
+    border: 2px solid #b8ffec;
+    border-radius: 6px;
+  }
+}
+
+@media (min-width: 768px) {
+  .navigation__item {
+    background-color: #ff3e79;
+  }
+  .icon-phone,
+  .icon-message,
+  .icon-profile {
+    display: inline-block;
+  }
+
+  .navigation__item {
+    display: inline-block;
+  }
+
+  .icon-settings {
+    margin-left: 24px;
+    display: inline-block;
+  }
+
+  .icon-settings::before {
+    content: '';
+    display: inline-block;
+    vertical-align: super;
+    width: 2px;
+    height: 32px;
+    background-color: #eaeaea;
+    // ? не понял, почему стиль ниже не работает. Почему поведение этого псевдоэелемента отличается от .logo::before Хотя оба inline-block
+    // margin: 0 20px;
+    // ? пришлось .icon-settings задавать марджин не до псевдоэлемента, а до другой иконки
+    margin-left: -20px;
+    margin-top: 4px;
+  }
+
+  .container {
+    padding: 0 24px;
+  }
+
+  .services {
+    &__description {
+      max-width: 100%;
+    }
+  }
+
+  .logo::before {
+    content: '';
+    display: inline-block;
+    vertical-align: super;
+    width: 2px;
+    height: 32px;
+    background-color: #eaeaea;
+    // ? получается расстояние от бургера до разделителя 16 + 4 = 20 - плохая практика? (сложение горизонтальных марджинов)
+    margin-left: 4px;
+    margin-right: 20px;
+  }
+
+  .logo::after {
+    display: none;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
+    &__img {
+      margin-left: 0;
+      height: 208px;
+      border-radius: 6px;
+    }
+  }
+
+  .services {
+    &__description {
+      min-width: 312px;
+      margin-right: 48px;
+    }
+
+    &__text:nth-child(even) {
+      margin-top: 24px;
+      display: block;
+    }
+  }
+}
+
+@media (min-width: 1120px) {
+  .container {
+    max-width: 1158px;
+    margin: 0 auto;
+  }
+
+  .header {
+    // ? не уверен, что это правильный вариант скрывать навигацию и вместе с h1 ставить "оставить заявку" и "статус ремонта"
+    display: none;
+  }
+
+  .icon-settings::before {
+    display: none;
+  }
+
+  .icon-settings {
+    margin-left: 0;
+  }
+
+  // ! код ниже мне не нравится в плане нейминга и вложенности самих элементов, но покаа как исправить не понимаю
+
+  .services__content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+  }
+
+  .services__navigation {
+    display: flex;
+  }
+
+  .item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 32px;
+  }
+
+  .navigation-label {
+    margin-right: 9px;
+  }
+
+  .menu {
+    overflow-x: hidden;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .content {
+    &__img {
+      height: 384px;
+    }
+  }
+
+  .services {
+    &__description {
+      max-width: 490px;
+    }
+  }
+}

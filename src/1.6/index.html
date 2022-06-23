@@ -1,15 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>1.6</title>
+  </head>
 
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>1.6</title>
-</head>
+  <body>
+    <div class="sidebar">
+      <div class="sidebar__header">
+        <div class="round-button--red icon-close"></div>
+        <img src="../../assets/logo.svg" alt="logo" />
+        <div class="round-button--red icon-search-sidebar"></div>
+      </div>
+      <nav>
+        <ul class="menu">
+          <li><a href="#" class="menu__link menu__link--active">Ремонт техники</a></li>
+          <li><a href="#" class="menu__link">Услуги и сервисы</a></li>
+          <li><a href="#" class="menu__link">Корпоративным клиентам</a></li>
+          <li><a href="#" class="menu__link">Продавцам техники</a></li>
+          <li><a href="#" class="menu__link">Партнерам</a></li>
+          <li><a href="#" class="menu__link">Производителям</a></li>
+          <li><a href="#" class="menu__link">Наши сервисные центры</a></li>
+          <li><a href="#" class="menu__link">Контанты</a></li>
+        </ul>
+      </nav>
+      <div class="sidebar__footer">
+        <div class="contacts">
+          <div class="contacts__buttons-row">
+            <div class="round-button--red icon-phone"></div>
+            <div class="round-button--red icon-message"></div>
+            <div class="round-button--red icon-profile"></div>
+          </div>
+          <a class="contacts__mail-link" href="mailto:mail@cps.com">mail@cps.com</a>
+          <a class="contacts__phone-link" href="tel:+78008908900">8 800 890 8900</a>
+        </div>
+        <div class="languages">
+          <input type="button" value="RU" class="languages__button languages__button--active" />
+          <input type="button" value="EN" class="languages__button" />
+          <input type="button" value="CH" class="languages__button" />
+        </div>
+      </div>
+    </div>
 
-<body>
-
-</body>
-
+    <header class="header">
+      <div class="container">
+        <nav class="navigation">
+          <div>
+            <div class="navigation__item icon-burger"></div>
+            <div class="logo">
+              <img src="../../assets/logo.svg" alt="logo" />
+            </div>
+          </div>
+          <div>
+            <div class="navigation__item icon-phone"></div>
+            <div class="navigation__item icon-message"></div>
+            <div class="navigation__item icon-profile"></div>
+            <div class="navigation__item icon-settings"></div>
+            <div class="navigation__item icon-search"></div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main class="main">
+      <div class="services">
+        <div class="container">
+          <!-- ? не уверен насчет названия .services__content, ткк там есть одновременно и заголовок, и элемент навигации -->
+          <div class="services__content">
+            <h1 class="services__title">Услуги и сервисы</h1>
+            <div class="services__navigation">
+              <!-- ! изменить имя с item на что-то более характерное -->
+              <div class="item">
+                <!-- ? элемент ниже не относится к navigation, но пока не понял, как не дублировать для этих иконок одинаковый css -->
+                <p class="navigation-label">Оставить заявку</p>
+                <div class="navigation__item icon-settings"></div>
+              </div>
+              <div class="item">
+                <p class="navigation-label">Оставить заявку</p>
+                <div class="navigation__item icon-search"></div>
+              </div>
+            </div>
+          </div>
+          <!-- не придумал, как назвать, это вроде не совсем меню -->
+          <ul class="menu">
+            <li class="menu__item menu__item--active">Ремонтируемые бренды</li>
+            <li class="menu__item">Ремонтируемые устройства</li>
+            <li class="menu__item">Цены на услуги</li>
+            <li class="menu__item">Адреса сервисных центров</li>
+            <li class="menu__item">Специальные цены</li>
+            <li class="menu__item">Отзывы</li>
+          </ul>
+          <div class="content">
+            <div class="services__description">
+              <p class="text services__text">
+                Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас
+                вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
+              </p>
+              <p class="text services__text">
+                Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что
+                подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам
+                обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
+              </p>
+              <div class="read-more">
+                <a href="#" class="link read-more__link">Читать далее</a>
+              </div>
+            </div>
+            <img src="../../assets/logo-in-office.jpg" alt="logo in office" class="content__img" />
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
