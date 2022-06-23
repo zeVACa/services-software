@@ -68,22 +68,23 @@
 .menu {
   list-style: none;
   margin-top: 46px;
+
+  &__link {
+    text-decoration: none;
+    color: #1b1c21;
+    font-size: 16px;
+    font-family: 'TTLakes-Medium';
+    display: inline-block;
+    padding: 6px 0;
+    margin-bottom: 20px;
+  }
+
+  &__link:hover,
+  &__link--active {
+    color: #7e7e82;
+  }
 }
 
-.menu__link {
-  text-decoration: none;
-  color: #1b1c21;
-  font-size: 16px;
-  font-family: 'TTLakes-Medium';
-  display: inline-block;
-  padding: 6px 0;
-  margin-bottom: 20px;
-}
-
-.menu__link:hover,
-.menu__link--active {
-  color: #7e7e82;
-}
 
 .round-button--red {
   width: 40px;
@@ -316,10 +317,11 @@
   }
 }
 
-.menu {
+.services-menu {
   list-style: none;
-  overflow-x: scroll;
+  // overflow-x: scroll;
   display: flex;
+  flex-wrap: wrap;
   margin: 24px 0;
 
   &__item {
@@ -329,7 +331,6 @@
     display: inline-block;
     padding: 8px 16px;
     white-space: nowrap;
-    
   }
 
   &__item:not(:first-child),
@@ -372,9 +373,6 @@
     width: 2px;
     height: 32px;
     background-color: #eaeaea;
-    // ? не понял, почему стиль ниже не работает. Почему поведение этого псевдоэелемента отличается от .logo::before Хотя оба inline-block
-    // margin: 0 20px;
-    // ? пришлось .icon-settings задавать марджин не до псевдоэлемента, а до другой иконки
     margin-left: -20px;
     margin-top: 4px;
   }
@@ -475,11 +473,6 @@
     margin-right: 9px;
   }
 
-  .menu {
-    overflow-x: hidden;
-    display: flex;
-    flex-wrap: wrap;
-  }
 
   .content {
     &__img {
