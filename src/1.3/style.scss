@@ -21,9 +21,9 @@
   src: url('../../fonts/TTLakes-Bold.ttf');
 }
 
-body {
+.body {
   min-height: 100vh;
-  background-color: #f8f8f8;
+  background-color: #f2f2f2;
   font-family: 'TTLakes-Medium';
 }
 
@@ -58,7 +58,8 @@ body {
     margin-right: 16px;
   }
 
-  &__item:hover {
+  &__item:hover,
+  .item:hover &__item {
     background-color: darken(#ff3e79, 15%);
   }
 }
@@ -70,7 +71,6 @@ body {
 
 .icon-burger {
   background: url('../../assets/icons/icon-burger.svg') no-repeat no-repeat center center #ff3e79;
-  // background: url('../assets/icon-burger.svg') no-repeat no-repeat center center #ff3e79;
 }
 
 .icon-message {
@@ -185,9 +185,15 @@ body {
 
   &__item--active {
     margin-right: 0;
+    color: darken(#7e7e82, 15%);
     background-color: #fff;
     border: 2px solid #b8ffec;
     border-radius: 6px;
+  }
+
+  &__item:hover {
+    cursor: pointer;
+    color: darken(#7e7e82, 15%);
   }
 }
 
@@ -311,6 +317,7 @@ body {
     flex-direction: row;
     align-items: center;
     margin-left: 32px;
+    cursor: pointer;
   }
 
   .navigation-label {

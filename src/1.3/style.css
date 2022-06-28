@@ -22,9 +22,9 @@
   src: url("../../fonts/TTLakes-Bold.ttf");
 }
 
-body {
+.body {
   min-height: 100vh;
-  background-color: #f8f8f8;
+  background-color: #f2f2f2;
   font-family: 'TTLakes-Medium';
 }
 
@@ -70,7 +70,8 @@ body {
   margin-right: 16px;
 }
 
-.navigation__item:hover {
+.navigation__item:hover,
+.item:hover .navigation__item {
   background-color: #f1004a;
 }
 
@@ -198,9 +199,15 @@ body {
 
 .menu__item--active {
   margin-right: 0;
+  color: #58585b;
   background-color: #fff;
   border: 2px solid #b8ffec;
   border-radius: 6px;
+}
+
+.menu__item:hover {
+  cursor: pointer;
+  color: #58585b;
 }
 
 @media (min-width: 768px) {
@@ -314,6 +321,7 @@ body {
         -ms-flex-align: center;
             align-items: center;
     margin-left: 32px;
+    cursor: pointer;
   }
   .navigation-label {
     margin-right: 9px;
