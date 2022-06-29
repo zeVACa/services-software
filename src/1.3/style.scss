@@ -121,11 +121,20 @@
   color: #1b1c21;
   font-weight: 600;
 }
+
 .read-more {
   display: inline-block;
   margin: 16px 0;
+  
+  &__button {
+    border: none;
+  }
 
-  &__link::before {
+  &__button:hover {
+    cursor: pointer;
+  }
+
+  &__button::before {
     content: '';
     display: inline-block;
     vertical-align: text-bottom;
