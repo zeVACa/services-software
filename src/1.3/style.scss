@@ -35,7 +35,7 @@
   padding: 0 16px;
 }
 
-.navigation {
+.buttons-group {
   display: flex;
   justify-content: space-between;
 
@@ -50,6 +50,7 @@
     height: 40px;
     background-color: #ff3e79;
     border-radius: 50%;
+    border: none;
     background-position: center center;
     transition: 0.2s ease;
   }
@@ -59,8 +60,9 @@
   }
 
   &__item:hover,
-  .item:hover &__item {
+  .services__button:hover &__item {
     background-color: darken(#ff3e79, 15%);
+    cursor: pointer;
   }
 }
 
@@ -217,7 +219,7 @@
 
 
 @media (min-width: 768px) {
-  .navigation__item {
+  .buttons-group__item {
     background-color: #ff3e79;
   }
   .icon-phone,
@@ -226,7 +228,7 @@
     display: inline-block;
   }
 
-  .navigation__item {
+  .buttons-group__item {
     display: inline-block;
   }
 
@@ -242,10 +244,8 @@
     width: 2px;
     height: 32px;
     background-color: #eaeaea;
-    // ? не понял, почему стиль ниже не работает. Почему поведение этого псевдоэелемента отличается от .logo::before Хотя оба inline-block
-    // margin: 0 20px;
-    // ? пришлось .icon-settings задавать марджин не до псевдоэлемента, а до другой иконки
-    margin-left: -20px;
+    margin-left: -80px;
+    // left: 40px;
     margin-top: 4px;
   }
 
@@ -331,15 +331,18 @@
     display: flex;
   }
 
-  .item {
+  .services__button {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-left: 32px;
     cursor: pointer;
+    border: none;
+    font-size: 16px;
+    font-family: 'TTLakes-Medium';
   }
 
-  .navigation-label {
+  .buttons-group-label {
     margin-right: 9px;
   }
 

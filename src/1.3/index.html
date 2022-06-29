@@ -11,19 +11,19 @@
   <body class="body">
     <header class="header">
       <div class="container">
-        <nav class="navigation">
+        <nav class="buttons-group">
           <div>
-            <div class="navigation__item icon-burger"></div>
+            <button class="buttons-group__item icon-burger"></button>
             <div class="logo">
-              <img src="../../assets/logo.svg" alt="logo" />
+              <a href="#"> <img src="../../assets/logo.svg" alt="logo" /></a>
             </div>
           </div>
           <div>
-            <div class="navigation__item icon-phone"></div>
-            <div class="navigation__item icon-message"></div>
-            <div class="navigation__item icon-profile"></div>
-            <div class="navigation__item icon-settings"></div>
-            <div class="navigation__item icon-search"></div>
+            <button class="buttons-group__item icon-phone"></button>
+            <button class="buttons-group__item icon-message"></button>
+            <button class="buttons-group__item icon-profile"></button>
+            <button class="buttons-group__item icon-settings"></button>
+            <button class="buttons-group__item icon-search"></button>
           </div>
         </nav>
       </div>
@@ -31,19 +31,17 @@
     <main class="main">
       <div class="services">
         <div class="container">
-          <!-- ? не уверен насчет названия .services__content, ткк там есть одновременно и заголовок, и элемент навигации -->
           <div class="services__content">
             <h1 class="services__title">Услуги и сервисы</h1>
             <div class="services__navigation">
-              <!-- ! изменить имя с item на что-то более характерное -->
-              <div class="item">
-                <p class="navigation-label">Оставить заявку</p>
-                <div class="navigation__item icon-settings"></div>
-              </div>
-              <div class="item">
-                <p class="navigation-label">Оставить заявку</p>
-                <div class="navigation__item icon-search"></div>
-              </div>
+              <button class="services__button">
+                <p class="buttons-group-label">Оставить заявку</p>
+                <div class="buttons-group__item icon-settings"></div>
+              </button>
+              <button class="services__button">
+                <p class="buttons-group-label">Статус ремонта</p>
+                <div class="buttons-group__item icon-search"></div>
+              </button>
             </div>
           </div>
           <ul class="menu">

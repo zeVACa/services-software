@@ -37,7 +37,7 @@
   padding: 0 16px;
 }
 
-.navigation {
+.buttons-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -46,8 +46,8 @@
           justify-content: space-between;
 }
 
-.navigation > :first-child,
-.navigation > :last-child {
+.buttons-group > :first-child,
+.buttons-group > :last-child {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -56,23 +56,25 @@
           align-items: center;
 }
 
-.navigation__item {
+.buttons-group__item {
   width: 40px;
   height: 40px;
   background-color: #ff3e79;
   border-radius: 50%;
+  border: none;
   background-position: center center;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
 
-.navigation__item:not(:last-child) {
+.buttons-group__item:not(:last-child) {
   margin-right: 16px;
 }
 
-.navigation__item:hover,
-.item:hover .navigation__item {
+.buttons-group__item:hover,
+.services__button:hover .buttons-group__item {
   background-color: #f1004a;
+  cursor: pointer;
 }
 
 .icon-phone {
@@ -228,7 +230,7 @@
 }
 
 @media (min-width: 768px) {
-  .navigation__item {
+  .buttons-group__item {
     background-color: #ff3e79;
   }
   .icon-phone,
@@ -236,7 +238,7 @@
   .icon-profile {
     display: inline-block;
   }
-  .navigation__item {
+  .buttons-group__item {
     display: inline-block;
   }
   .icon-settings {
@@ -250,7 +252,7 @@
     width: 2px;
     height: 32px;
     background-color: #eaeaea;
-    margin-left: -20px;
+    margin-left: -80px;
     margin-top: 4px;
   }
   .container {
@@ -326,7 +328,7 @@
     display: -ms-flexbox;
     display: flex;
   }
-  .item {
+  .services__button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -339,8 +341,11 @@
             align-items: center;
     margin-left: 32px;
     cursor: pointer;
+    border: none;
+    font-size: 16px;
+    font-family: 'TTLakes-Medium';
   }
-  .navigation-label {
+  .buttons-group-label {
     margin-right: 9px;
   }
   .menu {
