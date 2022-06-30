@@ -27,12 +27,17 @@
   font-family: 'TTLakes-Medium';
 }
 
+.page {
+  border: 1px solid red;
+}
+
 .header {
   background: #fff;
   padding: 19px 0;
 }
 .container {
   padding: 0 16px;
+  background-color: #f8f8f8;
 }
 
 .buttons-group {
@@ -107,12 +112,12 @@
 }
 
 .navigation__link {
-  color: #7E7E82;
+  color: #7e7e82;
   text-decoration: none;
 }
 
 .navigation__link:hover {
-  color: darken($color: #7E7E82, $amount: 35%)
+  color: darken($color: #7e7e82, $amount: 35%);
 }
 
 .link {
@@ -125,9 +130,10 @@
 .read-more {
   display: inline-block;
   margin: 16px 0;
-  
+
   &__button {
     border: none;
+    background: transparent;
   }
 
   &__button:hover {
@@ -144,6 +150,8 @@
     width: 24px;
     height: 24px;
     margin-right: 8px;
+    position: relative;
+    top: 4px;
   }
 }
 
@@ -230,11 +238,9 @@
   width: 80px;
   height: 40px;
   // left: -20px;
- position: fixed;
- right: 15px;
+  position: fixed;
+  right: 15px;
 }
-
-
 
 @media (min-width: 768px) {
   .buttons-group__item {
@@ -337,7 +343,7 @@
   .services__content {
     display: flex;
     justify-content: space-between;
-    margin-top: 24px;
+    padding-top: 24px;
   }
 
   .services__navigation {
@@ -345,6 +351,7 @@
   }
 
   .services__button {
+    background: transparent;
     display: flex;
     flex-direction: row;
     align-items: center;

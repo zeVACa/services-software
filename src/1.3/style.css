@@ -28,6 +28,10 @@
   font-family: 'TTLakes-Medium';
 }
 
+.page {
+  border: 1px solid red;
+}
+
 .header {
   background: #fff;
   padding: 19px 0;
@@ -35,6 +39,7 @@
 
 .container {
   padding: 0 16px;
+  background-color: #f8f8f8;
 }
 
 .buttons-group {
@@ -118,7 +123,7 @@
 }
 
 .navigation__link {
-  color: #7E7E82;
+  color: #7e7e82;
   text-decoration: none;
 }
 
@@ -140,6 +145,7 @@
 
 .read-more__button {
   border: none;
+  background: transparent;
 }
 
 .read-more__button:hover {
@@ -157,6 +163,8 @@
   width: 24px;
   height: 24px;
   margin-right: 8px;
+  position: relative;
+  top: 4px;
 }
 
 .logo::after {
@@ -338,7 +346,7 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    margin-top: 24px;
+    padding-top: 24px;
   }
   .services__navigation {
     display: -webkit-box;
@@ -346,6 +354,7 @@
     display: flex;
   }
   .services__button {
+    background: transparent;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
