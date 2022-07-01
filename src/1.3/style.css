@@ -120,10 +120,6 @@
   width: 100vw;
 }
 
-.text {
-  font-size: 14px;
-}
-
 .services__navigation {
   display: none;
 }
@@ -183,7 +179,7 @@
   margin-left: 16px;
 }
 
-.services__title {
+.title {
   font-family: 'TTLakes-Bold';
   font-size: 28px;
   color: #1b1c21;
@@ -192,7 +188,7 @@
   padding-top: 24px;
 }
 
-.services__title::before {
+.title::before {
   content: '';
   display: block;
   position: absolute;
@@ -205,12 +201,9 @@
           transform: translate(-4px);
 }
 
-.services__text {
+.text {
   display: block;
-}
-
-.services__text:nth-child(even) {
-  display: none;
+  font-size: 14px;
 }
 
 .navigation {
@@ -380,7 +373,7 @@
     font-size: 16px;
     font-family: 'TTLakes-Medium';
   }
-  .buttons-group-label {
+  .button-label {
     margin-right: 9px;
   }
   .navigation {
