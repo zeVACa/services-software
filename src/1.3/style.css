@@ -28,13 +28,13 @@
   font-family: 'TTLakes-Medium';
 }
 
-.page {
-  border: 1px solid red;
-}
-
 .header {
   background: #fff;
   padding: 19px 0;
+}
+
+.header > .container {
+  background-color: #fff;
 }
 
 .container {
@@ -49,6 +49,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background: #fff;
 }
 
 .buttons-group > :first-child,
@@ -183,7 +184,7 @@
   color: #1b1c21;
   padding: 0 16px;
   padding-left: 0;
-  margin-top: 24px;
+  padding-top: 24px;
 }
 
 .services__title::before {
@@ -246,8 +247,8 @@
 .navigation::after {
   display: block;
   content: '';
-  background: -webkit-gradient(linear, left top, right top, from(transparent), to(#f2f2f2));
-  background: linear-gradient(90deg, transparent, #f2f2f2);
+  background: -webkit-gradient(linear, left top, right top, from(transparent), to(#f8f8f8));
+  background: linear-gradient(90deg, transparent, #f8f8f8);
   width: 80px;
   height: 40px;
   position: fixed;
