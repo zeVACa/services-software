@@ -219,13 +219,15 @@
   display: none;
 }
 
-.navigation {
+.navigation__list {
   list-style: none;
   overflow-x: scroll;
   display: flex;
   margin: 24px 0;
   position: relative;
+}
 
+.navigation {
   &__item {
     color: #7e7e82;
     border: 2px solid transparent;
@@ -249,11 +251,11 @@
   }
 }
 
-.navigation::-webkit-scrollbar {
+.navigation__list::-webkit-scrollbar {
   width: 0;
 }
 
-.navigation::after {
+.navigation__list::after {
   display: block;
   content: '';
   background: linear-gradient(90deg, transparent, #f8f8f8);
@@ -395,13 +397,13 @@
     margin-right: 9px;
   }
 
-  .navigation {
+  .navigation__list {
     overflow-x: hidden;
     display: flex;
     flex-wrap: wrap;
   }
 
-  .navigation::after {
+  .navigation__list::after {
     display: none;
   }
 
