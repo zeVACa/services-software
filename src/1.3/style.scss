@@ -123,7 +123,7 @@
   background: url('../../assets/icons/icon-search.svg') no-repeat no-repeat center center #ff3e79;
 }
 
-.content {
+.about {
   &__img {
     margin-left: -16px;
     width: 100vw;
@@ -326,7 +326,7 @@
     display: none;
   }
 
-  .content {
+  .about {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
@@ -407,7 +407,7 @@
     display: none;
   }
 
-  .content {
+  .about {
     &__img {
       height: 384px;
     }

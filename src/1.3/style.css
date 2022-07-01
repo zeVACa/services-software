@@ -115,7 +115,7 @@
   background: url("../../assets/icons/icon-search.svg") no-repeat no-repeat center center #ff3e79;
 }
 
-.content__img {
+.about__img {
   margin-left: -16px;
   width: 100vw;
 }
@@ -305,7 +305,7 @@
   .logo::after {
     display: none;
   }
-  .content {
+  .about {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -316,7 +316,7 @@
         -ms-flex-align: stretch;
             align-items: stretch;
   }
-  .content__img {
+  .about__img {
     margin-left: 0;
     height: 208px;
     border-radius: 6px;
@@ -395,7 +395,7 @@
   .navigation__list::after {
     display: none;
   }
-  .content__img {
+  .about__img {
     height: 384px;
   }
   .services__description {
