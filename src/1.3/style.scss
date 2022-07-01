@@ -57,24 +57,45 @@
   }
 
   &__item {
-    width: 40px;
-    height: 40px;
-    background-color: #ff3e79;
-    border-radius: 50%;
-    border: none;
-    background-position: center center;
-    transition: 0.2s ease;
+    // width: 40px;
+    // height: 40px;
+    // background-color: #ff3e79;
+    // border-radius: 50%;
+    // border: none;
+    // background-position: center center;
+    // transition: 0.2s ease;
   }
 
   &__item:not(:last-child) {
     margin-right: 16px;
   }
 
-  &__item:hover,
-  .services__button:hover &__item {
-    background-color: darken(#ff3e79, 15%);
-    cursor: pointer;
-  }
+  // &__item:hover,
+  // .services__button:hover &__item {
+  //   background-color: darken(#ff3e79, 15%);
+  //   cursor: pointer;
+  // }
+}
+
+.button {
+  width: 40px;
+  height: 40px;
+  background-color: #ff3e79;
+  border-radius: 50%;
+  border: none;
+  background-position: center center;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.button:not(:last-child) {
+  margin-right: 16px;
+}
+
+.button :hover,
+.services__button:hover .button {
+  background-color: darken(#ff3e79, 15%);
+  cursor: pointer;
 }
 
 .icon-phone {
@@ -252,6 +273,11 @@
   .buttons-group__item {
     background-color: #ff3e79;
   }
+
+  .button {
+    background-color: #ff3e79;
+  }
+
   .icon-phone,
   .icon-message,
   .icon-profile {
