@@ -215,6 +215,10 @@
   font-size: 14px;
 }
 
+.text:nth-child(even) {
+  display: none;
+}
+
 .navigation {
   list-style: none;
   overflow-x: scroll;
@@ -337,11 +341,12 @@
       min-width: 312px;
       margin-right: 48px;
     }
+  }
 
-    &__text:nth-child(even) {
-      margin-top: 24px;
-      display: block;
-    }
+  .text:nth-child(even) {
+    display: block;
+    margin-top: 24px;
+    display: block;
   }
 }
 
@@ -366,6 +371,7 @@
   .services__content {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-top: 24px;
   }
 
