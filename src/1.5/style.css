@@ -125,7 +125,7 @@
 .swiper-slide {
   height: 80px !important;
   width: 240px !important;
-  margin-left: 16px !important;
+  margin-right: 16px !important;
 }
 
 .swiper-pagination-bullet {
