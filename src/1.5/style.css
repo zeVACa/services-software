@@ -45,7 +45,7 @@
 }
 
 .background-for-section-title {
-  background-color: #fff;
+  background: linear-gradient(30deg, #f8f8f8 0%, #ffffff 98.61%);
 }
 
 .brands {
@@ -81,6 +81,14 @@
   border-radius: 50%;
   border: 2px solid #ff3e79;
   position: relative;
+  cursor: pointer;
+}
+
+.check-partner-button:hover {
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+  -webkit-box-shadow: #cecece 0px 0px 5px;
+          box-shadow: #cecece 0px 0px 5px;
 }
 
 .check-partner-button::before,
@@ -110,12 +118,20 @@
   position: relative;
   overflow-x: hidden !important;
   overflow-y: visible !important;
-  height: 101px;
+  height: 110px;
   margin-top: 16px;
 }
 
 .swiper-slide {
   height: 80px !important;
+  width: 240px !important;
+  margin-left: 16px !important;
+}
+
+.swiper-pagination-bullet {
+  width: 12px !important;
+  height: 12px !important;
+  background-color: #b5b6bc !important;
 }
 
 .swiper-pagination {
