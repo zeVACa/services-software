@@ -56,25 +56,9 @@
     align-items: center;
   }
 
-  &__item {
-    // width: 40px;
-    // height: 40px;
-    // background-color: #ff3e79;
-    // border-radius: 50%;
-    // border: none;
-    // background-position: center center;
-    // transition: 0.2s ease;
-  }
-
   &__item:not(:last-child) {
     margin-right: 16px;
   }
-
-  // &__item:hover,
-  // .services__button:hover &__item {
-  //   background-color: darken(#ff3e79, 15%);
-  //   cursor: pointer;
-  // }
 }
 
 .button {
@@ -261,7 +245,6 @@
   background: linear-gradient(90deg, transparent, #f8f8f8);
   width: 80px;
   height: 40px;
-  // left: -20px;
   position: fixed;
   right: 15px;
 }
@@ -350,6 +333,10 @@
     margin-top: 24px;
     display: block;
   }
+
+  .about__description {
+    margin-right: 48px;
+  }
 }
 
 @media (min-width: 1120px) {
@@ -421,5 +408,9 @@
     &__title {
       margin-top: 0;
     }
+  }
+
+  .about__description {
+    margin-right: 36px;
   }
 }

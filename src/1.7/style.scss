@@ -23,26 +23,23 @@
 
 .body {
   min-height: 100vh;
-  background-color: #f8f8f8;
+  background-color: #f2f2f2;
   font-family: 'TTLakes-Medium';
   letter-spacing: -0.2px;
 }
 
+// 1.4
+
 .sidebar {
-  position: sticky;
-  top: 0;
-  // float: left;
+  position: fixed;
   background-color: #fff;
   width: 320px;
   height: 100vh;
   padding: 19px 24px 32px;
+  box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
 
   display: flex;
   flex-direction: column;
-}
-
-.sidebar {
-  display: none;
 }
 
 .sidebar__header {
@@ -71,21 +68,21 @@
 .menu {
   list-style: none;
   margin-top: 46px;
+}
 
-  &__link {
-    text-decoration: none;
-    color: #1b1c21;
-    font-size: 16px;
-    font-family: 'TTLakes-Medium';
-    display: inline-block;
-    padding: 6px 0;
-    margin-bottom: 20px;
-  }
+.menu__link {
+  text-decoration: none;
+  color: #1b1c21;
+  font-size: 16px;
+  font-family: 'TTLakes-Medium';
+  display: inline-block;
+  padding: 6px 0;
+  margin-bottom: 20px;
+}
 
-  &__link:hover,
-  &__link--active {
-    color: #7e7e82;
-  }
+.menu__link:hover,
+.menu__link--active {
+  color: #7e7e82;
 }
 
 .round-button--red {
@@ -96,6 +93,8 @@
   background-position: center center;
   transition: 0.2s ease;
   margin-right: 16px;
+  cursor: pointer;
+  border: none;
 }
 
 .round-button--red:hover {
@@ -114,8 +113,13 @@
   background: url('../../assets/icons/icon-profile.svg') no-repeat no-repeat center center #ff3e79;
 }
 
+.sidebar {
+  &__footer {
+    margin-top: auto;
+  }
+}
+
 .sidebar__footer {
-  margin-top: auto;
   .contacts {
     &__buttons-row {
       // ткк при .round-button--red inline-block появлется пробел, который нужно комментировать в html - не оч красиво https://ru.stackoverflow.com/questions/609992/%D0%9E%D1%82%D1%81%D1%82%D1%83%D0%BF%D1%8B-%D0%BC%D0%B5%D0%B6%D0%B4%D1%83-%D0%B8%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD%D0%BE%D0%B2%D1%8B%D0%BC%D0%B8-%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D0%BC%D0%B8
@@ -167,23 +171,34 @@
   }
 }
 
-// 1.3
+// 1.4 end
+
+.page {
+  // display: flex;
+}
+
+.content {
+  margin: 0 auto;
+}
 
 .header {
   background: #fff;
   padding: 19px 0;
 }
+
+.header > .container {
+  background-color: #fff;
+}
+
 .container {
   padding: 0 16px;
+  background-color: #f8f8f8;
 }
 
-.body {
-  display: flex;
-}
-
-.navigation {
+.buttons-group {
   display: flex;
   justify-content: space-between;
+  background: #fff;
 
   & > :first-child,
   & > :last-child {
@@ -191,32 +206,39 @@
     align-items: center;
   }
 
-  &__item {
-    width: 40px;
-    height: 40px;
-    background-color: #ff3e79;
-    border-radius: 50%;
-    background-position: center center;
-    transition: 0.2s ease;
-  }
-
   &__item:not(:last-child) {
     margin-right: 16px;
   }
-
-  &__item:hover {
-    background-color: darken(#ff3e79, 15%);
-  }
 }
 
-// .icon-phone {
-//   background: url('../../assets/icons/icon-phone.svg') no-repeat no-repeat center center;
-//   display: none;
-// }
+.button {
+  width: 40px;
+  height: 40px;
+  background-color: #ff3e79;
+  border-radius: 50%;
+  border: none;
+  background-position: center center;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.button:not(:last-child) {
+  margin-right: 16px;
+}
+
+.button :hover,
+.services__button:hover .button {
+  background-color: darken(#ff3e79, 15%);
+  cursor: pointer;
+}
+
+.icon-phone {
+  background: url('../../assets/icons/icon-phone.svg') no-repeat no-repeat center center;
+  display: none;
+}
 
 .icon-burger {
   background: url('../../assets/icons/icon-burger.svg') no-repeat no-repeat center center #ff3e79;
-  // background: url('../assets/icon-burger.svg') no-repeat no-repeat center center #ff3e79;
 }
 
 .icon-message {
@@ -235,19 +257,24 @@
   background: url('../../assets/icons/icon-search.svg') no-repeat no-repeat center center #ff3e79;
 }
 
-.content {
+.about {
   &__img {
     margin-left: -16px;
     width: 100vw;
   }
 }
 
-.text {
-  font-size: 14px;
-}
-
 .services__navigation {
   display: none;
+}
+
+.navigation__link {
+  color: #7e7e82;
+  text-decoration: none;
+}
+
+.navigation__link:hover {
+  color: darken($color: #7e7e82, $amount: 35%);
 }
 
 .link {
@@ -256,11 +283,21 @@
   color: #1b1c21;
   font-weight: 600;
 }
+
 .read-more {
   display: inline-block;
   margin: 16px 0;
 
-  &__link::before {
+  &__button {
+    border: none;
+    background: transparent;
+  }
+
+  &__button:hover {
+    cursor: pointer;
+  }
+
+  &__button::before {
     content: '';
     display: inline-block;
     vertical-align: text-bottom;
@@ -270,6 +307,8 @@
     width: 24px;
     height: 24px;
     margin-right: 8px;
+    position: relative;
+    top: 4px;
   }
 }
 
@@ -284,44 +323,45 @@
   margin-left: 16px;
 }
 
-.services {
-  &__title {
-    font-family: 'TTLakes-Bold';
-    font-size: 28px;
-    color: #1b1c21;
-    padding: 0 16px;
-    padding-left: 0;
-  }
-
-  &__title::before {
-    content: '';
-    display: block;
-    position: absolute;
-    background-color: #41f6d7;
-    width: 4px;
-    border-radius: 4px;
-    height: 36px;
-    left: 0;
-    // top:0;
-    // transform: translate(-52px);
-  }
-
-  &__text {
-    display: block;
-  }
-
-  &__text:nth-child(even) {
-    display: none;
-  }
+.title {
+  font-family: 'TTLakes-Bold';
+  font-size: 28px;
+  color: #1b1c21;
+  padding: 0 16px;
+  padding-left: 0;
+  padding-top: 24px;
 }
 
-.services-menu {
-  list-style: none;
-  // overflow-x: scroll;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 24px 0;
+.title::before {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: #41f6d7;
+  width: 8px;
+  border-radius: 4px;
+  height: 36px;
+  left: 0;
+  transform: translate(-4px);
+}
 
+.text {
+  display: block;
+  font-size: 14px;
+}
+
+.text:nth-child(even) {
+  display: none;
+}
+
+.navigation__list {
+  list-style: none;
+  overflow-x: scroll;
+  display: flex;
+  margin: 24px 0;
+  position: relative;
+}
+
+.navigation {
   &__item {
     color: #7e7e82;
     border: 2px solid transparent;
@@ -329,37 +369,52 @@
     display: inline-block;
     padding: 8px 16px;
     white-space: nowrap;
-    margin-right: 15px;
-    margin-bottom: 10px;
   }
 
-  &__item:first-child {
-    margin-left: 0;
-  }
-
-  &__item--active,
-  &__item:hover {
+  &__item--active {
+    margin-right: 0;
+    color: darken(#7e7e82, 15%);
     background-color: #fff;
     border: 2px solid #b8ffec;
     border-radius: 6px;
   }
+
+  &__item:hover {
+    cursor: pointer;
+    color: darken(#7e7e82, 15%);
+  }
+}
+
+.navigation__list::-webkit-scrollbar {
+  width: 0;
+}
+
+.navigation__list::after {
+  display: block;
+  content: '';
+  background: linear-gradient(90deg, transparent, #f8f8f8);
+  width: 80px;
+  height: 40px;
+  position: fixed;
+  right: 15px;
 }
 
 @media (min-width: 768px) {
-  .sidebar {
-    display: block;
-  }
-
-  .navigation__item {
+  .buttons-group__item {
     background-color: #ff3e79;
   }
+
+  .button {
+    background-color: #ff3e79;
+  }
+
   .icon-phone,
   .icon-message,
   .icon-profile {
     display: inline-block;
   }
 
-  .navigation__item {
+  .buttons-group__item {
     display: inline-block;
   }
 
@@ -375,7 +430,7 @@
     width: 2px;
     height: 32px;
     background-color: #eaeaea;
-    margin-left: -20px;
+    margin-left: -80px;
     margin-top: 4px;
   }
 
@@ -386,12 +441,7 @@
   .services {
     &__description {
       max-width: 100%;
-      // display: flex;
     }
-  }
-
-  .d-flex {
-    display: flex;
   }
 
   .logo::before {
@@ -401,7 +451,6 @@
     width: 2px;
     height: 32px;
     background-color: #eaeaea;
-    // ? получается расстояние от бургера до разделителя 16 + 4 = 20 - плохая практика? (сложение горизонтальных марджинов)
     margin-left: 4px;
     margin-right: 20px;
   }
@@ -410,15 +459,12 @@
     display: none;
   }
 
-  .content {
-    // display: flex;
-    // justify-content: center;
-    // align-items: stretch;
-    margin: 0 auto;
+  .about {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
 
     &__img {
-      width: 100%;
-      height: 100%;
       margin-left: 0;
       height: 208px;
       border-radius: 6px;
@@ -430,18 +476,19 @@
       min-width: 312px;
       margin-right: 48px;
     }
+  }
 
-    &__text:nth-child(even) {
-      margin-top: 24px;
-      display: block;
-    }
+  .text:nth-child(even) {
+    display: block;
+    margin-top: 24px;
+    display: block;
   }
 }
 
 @media (min-width: 1120px) {
   .container {
-    // max-width: 1158px;
-    // margin: 0 auto;
+    max-width: 1158px;
+    margin: 0 auto;
   }
 
   .header {
@@ -456,31 +503,44 @@
     margin-left: 0;
   }
 
-  // ! код ниже мне не нравится в плане нейминга и вложенности самих элементов, но покаа как исправить не понимаю
-
   .services__content {
     display: flex;
     justify-content: space-between;
-    margin-top: 24px;
+    align-items: center;
+    padding-top: 24px;
   }
 
   .services__navigation {
     display: flex;
   }
 
-  .item {
+  .services__button {
+    background: transparent;
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-left: 32px;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    font-family: 'TTLakes-Medium';
   }
 
-  .navigation-label {
+  .button-label {
     margin-right: 9px;
   }
 
-  .content {
-    position: relative;
+  .navigation__list {
+    overflow-x: hidden;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .navigation__list::after {
+    display: none;
+  }
+
+  .about {
     &__img {
       height: 384px;
     }
@@ -490,152 +550,9 @@
     &__description {
       max-width: 490px;
     }
-  }
-}
 
-@media (max-width: 1420px) {
-  .sidebar {
-    display: none;
-  }
-}
-
-// 1.5
-
-.brands {
-  display: none;
-  overflow-x: auto;
-  margin-top: 16px;
-
-  &__card-item {
-    width: 240px;
-    padding: 20px 16px;
-    border: 1px solid #eaeaea;
-    background-color: #fff;
-    // margin-right: 16px;
-    border-radius: 6px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-}
-
-.check-partner-button {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  border: 2px solid #ff3e79;
-  position: relative;
-}
-
-.check-partner-button::before,
-.check-partner-button::after {
-  content: '';
-  display: block;
-  height: 8px;
-  width: 2px;
-  background-color: #ff3e79;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border-radius: 5px;
-}
-
-.check-partner-button::before {
-  transform: translate(-50%, calc(-50% + -2.5px)) rotate(-45deg);
-}
-
-.check-partner-button::after {
-  transform: translate(-50%, calc(-50% + 2px)) rotate(45deg);
-}
-
-.mySwiper {
-  position: relative;
-  overflow-x: hidden !important;
-  overflow-y: visible !important;
-  height: 101px;
-  margin-top: 16px;
-}
-
-.swiper-slide {
-  height: 80px !important;
-}
-
-.swiper-pagination {
-  top: 85px;
-}
-
-.collapse-button {
-  display: none;
-}
-
-@media (min-width: 768px) {
-  // не уверен, что контейнер нужно сужать подобным способом, возможно он должен быть эластичным? (вместе с контентом)
-
-  .brands {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    gap: 2%;
-
-    &__card-item {
-      width: 32%;
-      margin-bottom: 16px;
-    }
-  }
-
-  .collapse-button {
-    display: block;
-    margin-top: 8px;
-    position: relative;
-    padding-left: 20px;
-    font-family: 'TTLakes-Medium';
-    font-size: 16px;
-  }
-
-  .collapse-button::before {
-    content: '';
-    position: absolute;
-    // не уверен, что это правильный способ выравнивания псевдоэлемента
-    top: 5px;
-    left: 5px;
-    width: 10px;
-    height: 10px;
-    background: url('../../assets/icons/icon-read-more.svg') no-repeat;
-  }
-
-  .collapse-button:hover {
-    cursor: pointer;
-  }
-
-  .collapse-button.content-is-collapsed::before {
-    top: 7px;
-    transform: rotate(180deg);
-  }
-
-  .mobile-only {
-    display: none;
-  }
-}
-
-@media (min-width: 1120px) {
-  .brands {
-    // 1 способ подсказал парень из чата, что 3 гэпа по 2% => 94 / 4 = 23.5% не очень удобно считать каждый раз. Гридом похоже проще. С ними не работал, но походу надо изучить
-    justify-content: flex-start;
-    gap: 2%;
-
-    // 2 способ (тоже подсказал парень из чата)
-    // display: grid;
-    // grid-template-columns: repeat(4, 1fr);
-    // column-gap: 16px;
-    // row-gap: 16px;
-
-    &__card-item {
-      // 1 способ
-      width: 23.5%;
-      //  2 способ
-      // width: 100%;
-      // margin-bottom: 16px;
+    &__title {
+      margin-top: 0;
     }
   }
 }
