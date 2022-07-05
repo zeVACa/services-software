@@ -85,6 +85,9 @@
 .icon-phone {
   background: url('../../assets/icons/icon-phone.svg') no-repeat no-repeat center center;
   display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .icon-burger {
@@ -94,10 +97,16 @@
 .icon-message {
   background: url('../../assets/icons/icon-message.svg') no-repeat no-repeat center center #ff3e79;
   display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .icon-profile {
   background: url('../../assets/icons/icon-profile.svg') no-repeat no-repeat center center #ff3e79;
   display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .icon-settings {
   background: url('../../assets/icons/icon-settings.svg') no-repeat no-repeat center center #ff3e79;
@@ -256,6 +265,12 @@
 
   .button {
     background-color: #ff3e79;
+  }
+
+  .icon-phone,
+  .icon-message,
+  .icon-profile {
+    position: initial;
   }
 
   .icon-phone,
