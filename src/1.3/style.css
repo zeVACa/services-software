@@ -89,6 +89,10 @@
   cursor: pointer;
 }
 
+.button:hover {
+  background-color: #f1004a;
+}
+
 .icon-phone {
   background: url("../../assets/icons/icon-phone.svg") no-repeat no-repeat center center;
   display: none;
@@ -177,6 +181,18 @@
   margin-right: 8px;
   position: relative;
   top: 4px;
+}
+
+.logo:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: scale(110%);
+          transform: scale(110%);
+}
+
+.logo:not(:hover) {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .divider-logo-after {

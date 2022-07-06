@@ -27,10 +27,6 @@
   font-family: 'TTLakes-Medium';
 }
 
-.page {
-  // border: 1px solid red;
-}
-
 .header {
   background: #fff;
   padding: 19px 0;
@@ -77,6 +73,10 @@
 .services__button:hover .button {
   background-color: darken(#ff3e79, 15%);
   cursor: pointer;
+}
+
+.button:hover {
+  background-color: darken(#ff3e79, 15%);
 }
 
 .icon-phone {
@@ -166,6 +166,15 @@
     position: relative;
     top: 4px;
   }
+}
+
+.logo:hover {
+  transition: all 0.3s;
+  transform: scale(110%);
+}
+
+.logo:not(:hover) {
+  transition: all 0.3s;
 }
 
 .divider-logo-after {
