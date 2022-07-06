@@ -42,6 +42,18 @@
   background-color: #f8f8f8;
 }
 
+.header__panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .buttons-group {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -50,20 +62,9 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   background: #fff;
-}
-
-.buttons-group > :first-child,
-.buttons-group > :last-child {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.buttons-group__item:not(:last-child) {
-  margin-right: 16px;
 }
 
 .button {
@@ -178,12 +179,10 @@
   top: 4px;
 }
 
-.logo::after {
-  content: '';
-  display: inline-block;
-  vertical-align: super;
+.divider-logo-after {
   width: 2px;
   height: 32px;
+  vertical-align: super;
   background-color: #eaeaea;
   margin-left: 16px;
 }
@@ -267,37 +266,26 @@
 }
 
 @media (min-width: 768px) {
-  .buttons-group__item {
-    background-color: #ff3e79;
-  }
   .button {
     background-color: #ff3e79;
   }
   .icon-phone,
   .icon-message,
   .icon-profile {
+    display: inline-block;
     position: initial;
-  }
-  .icon-phone,
-  .icon-message,
-  .icon-profile {
-    display: inline-block;
-  }
-  .buttons-group__item {
-    display: inline-block;
   }
   .icon-settings {
     margin-left: 24px;
     display: inline-block;
   }
-  .icon-settings::before {
-    content: '';
+  .divider-icon-settings-before {
     display: inline-block;
     vertical-align: super;
     width: 2px;
     height: 32px;
     background-color: #eaeaea;
-    margin-left: -80px;
+    margin-left: 10px;
     margin-top: 4px;
   }
   .container {
@@ -306,8 +294,7 @@
   .services__description {
     max-width: 100%;
   }
-  .logo::before {
-    content: '';
+  .divider-logo-before {
     display: inline-block;
     vertical-align: super;
     width: 2px;
@@ -316,7 +303,7 @@
     margin-left: 4px;
     margin-right: 20px;
   }
-  .logo::after {
+  .divider-logo-after {
     display: none;
   }
   .about {
@@ -370,9 +357,9 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     padding-top: 24px;
   }
   .services__navigation {

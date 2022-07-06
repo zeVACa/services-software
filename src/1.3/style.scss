@@ -45,20 +45,17 @@
   background-color: #f8f8f8;
 }
 
+.header__panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .buttons-group {
   display: flex;
   justify-content: space-between;
   background: #fff;
-
-  & > :first-child,
-  & > :last-child {
-    display: flex;
-    align-items: center;
-  }
-
-  &__item:not(:last-child) {
-    margin-right: 16px;
-  }
+  align-items: center;
 }
 
 .button {
@@ -171,14 +168,11 @@
   }
 }
 
-.logo::after {
-  content: '';
-  display: inline-block;
-  vertical-align: super;
+.divider-logo-after {
   width: 2px;
   height: 32px;
+  vertical-align: super;
   background-color: #eaeaea;
-  // ? получается расстояние от бургера до разделителя 16 + 4 = 20 - плохая практика? (сложение горизонтальных марджинов)
   margin-left: 16px;
 }
 
@@ -259,10 +253,6 @@
 }
 
 @media (min-width: 768px) {
-  .buttons-group__item {
-    background-color: #ff3e79;
-  }
-
   .button {
     background-color: #ff3e79;
   }
@@ -270,17 +260,8 @@
   .icon-phone,
   .icon-message,
   .icon-profile {
+    display: inline-block;
     position: initial;
-  }
-
-  .icon-phone,
-  .icon-message,
-  .icon-profile {
-    display: inline-block;
-  }
-
-  .buttons-group__item {
-    display: inline-block;
   }
 
   .icon-settings {
@@ -288,14 +269,13 @@
     display: inline-block;
   }
 
-  .icon-settings::before {
-    content: '';
+  .divider-icon-settings-before {
     display: inline-block;
     vertical-align: super;
     width: 2px;
     height: 32px;
     background-color: #eaeaea;
-    margin-left: -80px;
+    margin-left: 10px;
     margin-top: 4px;
   }
 
@@ -309,8 +289,7 @@
     }
   }
 
-  .logo::before {
-    content: '';
+  .divider-logo-before {
     display: inline-block;
     vertical-align: super;
     width: 2px;
@@ -320,7 +299,7 @@
     margin-right: 20px;
   }
 
-  .logo::after {
+  .divider-logo-after {
     display: none;
   }
 
@@ -375,7 +354,7 @@
   .services__content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     padding-top: 24px;
   }
 
