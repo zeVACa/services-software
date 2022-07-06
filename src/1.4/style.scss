@@ -83,7 +83,17 @@
   color: #7e7e82;
 }
 
-.round-button--red {
+.menu__link--active::before {
+  content: '';
+  background-color: #41f6d7;
+  width: 5px;
+  height: 32px;
+  position: absolute;
+  left: 0;
+  margin-top: -5px;
+}
+
+.button {
   width: 40px;
   height: 40px;
   background-color: #ff3e79;
@@ -95,7 +105,7 @@
   border: none;
 }
 
-.round-button--red:hover {
+.button:hover {
   background-color: darken(#ff3e79, 15%);
 }
 
@@ -117,10 +127,19 @@
   }
 }
 
+.logo:hover {
+  transition: all 0.3s;
+  transform: scale(110%);
+}
+
+.logo:not(:hover) {
+  transition: all 0.3s;
+}
+
 .sidebar__footer {
   .contacts {
     &__buttons-row {
-      // ткк при .round-button--red inline-block появлется пробел, который нужно комментировать в html - не оч красиво https://ru.stackoverflow.com/questions/609992/%D0%9E%D1%82%D1%81%D1%82%D1%83%D0%BF%D1%8B-%D0%BC%D0%B5%D0%B6%D0%B4%D1%83-%D0%B8%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD%D0%BE%D0%B2%D1%8B%D0%BC%D0%B8-%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D0%BC%D0%B8
+      // ткк при .button inline-block появлется пробел, который нужно комментировать в html - не оч красиво https://ru.stackoverflow.com/questions/609992/%D0%9E%D1%82%D1%81%D1%82%D1%83%D0%BF%D1%8B-%D0%BC%D0%B5%D0%B6%D0%B4%D1%83-%D0%B8%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD%D0%BE%D0%B2%D1%8B%D0%BC%D0%B8-%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D0%BC%D0%B8
       display: flex;
     }
 
@@ -162,9 +181,9 @@
       background: none;
     }
 
-    &__button--active {
+    &__button--active,
+    &__button:hover {
       color: #7e7e82;
-      color: #1b1c21;
     }
   }
 }

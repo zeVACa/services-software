@@ -95,7 +95,17 @@
   color: #7e7e82;
 }
 
-.round-button--red {
+.menu__link--active::before {
+  content: '';
+  background-color: #41f6d7;
+  width: 5px;
+  height: 32px;
+  position: absolute;
+  left: 0;
+  margin-top: -5px;
+}
+
+.button {
   width: 40px;
   height: 40px;
   background-color: #ff3e79;
@@ -108,7 +118,7 @@
   border: none;
 }
 
-.round-button--red:hover {
+.button:hover {
   background-color: #f1004a;
 }
 
@@ -126,6 +136,18 @@
 
 .sidebar__footer {
   margin-top: auto;
+}
+
+.logo:hover {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: scale(110%);
+          transform: scale(110%);
+}
+
+.logo:not(:hover) {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .sidebar__footer .contacts__buttons-row {
@@ -170,8 +192,7 @@
   background: none;
 }
 
-.sidebar__footer .languages__button--active {
+.sidebar__footer .languages__button--active, .sidebar__footer .languages__button:hover {
   color: #7e7e82;
-  color: #1b1c21;
 }
 /*# sourceMappingURL=style.css.map */
