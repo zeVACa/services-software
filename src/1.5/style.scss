@@ -36,13 +36,17 @@
 .container {
   padding: 0 16px;
   margin: 0 auto;
-  // background-color: #f8f8f8;
+}
+
+.container-mobile-padding-right-none {
+  padding-right: 0;
 }
 
 .section-title {
-  //   color: #7e7e82;
   text-transform: uppercase;
   padding: 16px 0;
+  font-size: 16px;
+  color: #7e7e82;
 }
 
 .background-for-section-title {
@@ -112,6 +116,18 @@
   margin-top: 16px;
 }
 
+.slider-wrapper::before {
+  content: '';
+  // background: linear-gradient(-90deg, #f8f8f8, transparent);
+  background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%)
+  width: 24px;
+  height: 20px;
+  position: absolute;
+  right: 0;
+  height: 100px;
+  z-index: 999;
+}
+
 .swiper-slide {
   height: 80px !important;
   width: 240px !important;
@@ -133,9 +149,9 @@
 }
 
 @media (min-width: 768px) {
-  // не уверен, что контейнер нужно сужать подобным способом, возможно он должен быть эластичным? (вместе с контентом)
   .container {
     max-width: 720px;
+    padding: 0 16px;
   }
 
   .brands {
@@ -154,7 +170,7 @@
     display: block;
     margin-top: 8px;
     position: relative;
-    padding-left: 20px;
+    padding-left: 33px;
     font-family: 'TTLakes-Medium';
     font-size: 16px;
   }
