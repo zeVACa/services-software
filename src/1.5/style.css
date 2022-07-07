@@ -130,8 +130,8 @@
 
 .slider-wrapper::before {
   content: '';
-  background: -webkit-gradient(linear, right top, left top, from(#f8f8f8), to(transparent));
-  background: linear-gradient(-90deg, #f8f8f8, transparent);
+  background: -webkit-gradient(linear, right top, left top, color-stop(16.84%, #f8f8f8), to(rgba(248, 248, 248, 0.0001)));
+  background: linear-gradient(270deg, #f8f8f8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
   width: 24px;
   height: 20px;
   position: absolute;
