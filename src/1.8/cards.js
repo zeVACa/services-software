@@ -19,7 +19,7 @@ async function renderCards() {
   let cardsHolder = '';
 
   for (let i = 0; i < cardsLimit; i++) {
-    cardsHolder += `<div class="brands__card-item"><img src="../../assets/brands/${cards[i].file}"><div class="check-partner-button"></div></div>`;
+    cardsHolder += `<div class="brands__card-item"><img src="../../assets/brands/${cards[i].file}"><div class="next-page-button"></div></div>`;
   }
 
   const cardsArea = document.querySelector('.brands');

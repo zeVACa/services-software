@@ -625,8 +625,26 @@
   color: #7e7e82;
 }
 
-.background-for-section-title {
-  background: linear-gradient(30deg, #f8f8f8 0%, #ffffff 98.61%);
+.card {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 6px;
+  min-height: 160px;
+  padding: 16px;
+
+  &__name {
+    font-size: 16px;
+  }
+}
+
+.second-swiper {
+  height: 190px !important;
+}
+
+.container-bgc-gradient {
+  background: linear-gradient(90deg, #f8f8f8 1.39%, #ffffff 100%);
+  margin-top: 32px;
 }
 
 .brands {
@@ -648,23 +666,23 @@
   }
 }
 
-.check-partner-button {
+.next-page-button {
   height: 40px;
   width: 40px;
   border-radius: 50%;
   border: 2px solid #ff3e79;
+  align-self: flex-end;
   position: relative;
   cursor: pointer;
 }
 
-.check-partner-button:hover {
-  // background-color: #ff3e79;
+.next-page-button:hover {
   transition: all 200ms;
   box-shadow: #cecece 0px 0px 5px;
 }
 
-.check-partner-button::before,
-.check-partner-button::after {
+.next-page-button::before,
+.next-page-button::after {
   content: '';
   display: block;
   height: 8px;
@@ -676,11 +694,11 @@
   border-radius: 5px;
 }
 
-.check-partner-button::before {
+.next-page-button::before {
   transform: translate(-50%, calc(-50% + -2.5px)) rotate(-45deg);
 }
 
-.check-partner-button::after {
+.next-page-button::after {
   transform: translate(-50%, calc(-50% + 2px)) rotate(45deg);
 }
 
