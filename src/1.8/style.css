@@ -431,7 +431,7 @@
   border: 2px solid transparent;
   font-size: 16px;
   display: inline-block;
-  padding: 8px 16px;
+  padding: 8px 12px;
   white-space: nowrap;
 }
 
@@ -580,6 +580,9 @@
     display: -ms-flexbox;
     display: flex;
   }
+  .navigation::after {
+    display: none;
+  }
   .services__button {
     background: transparent;
     display: -webkit-box;
@@ -638,6 +641,7 @@
 
 .section-title {
   text-transform: uppercase;
+  font-family: 'TTLakes-Medium';
   padding: 16px 0;
   font-size: 16px;
   color: #7e7e82;
@@ -883,5 +887,77 @@
   .brands__card-item {
     width: 23.5%;
   }
+}
+
+.table {
+  width: 100%;
+  font-size: 14px;
+  border-collapse: collapse;
+}
+
+.table tbody {
+  background-color: #fff;
+  border-radius: 6px;
+}
+
+.table th {
+  font-family: 'TTLakes-Medium';
+  font-weight: normal;
+  color: #7e7e82;
+  text-align: left;
+}
+
+.table td,
+.table th {
+  padding: 24px;
+  border: none;
+}
+
+.table td {
+  border-bottom: 1px solid #eaeaea;
+}
+
+.order-button {
+  background-color: #ff3e79;
+  border: none;
+  padding: 8px 12px;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 16px;
+  width: 100%;
+  font-family: 'TTLakes-Medium';
+  text-align: left;
+  position: relative;
+}
+
+.order-button:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: #f1004a;
+}
+
+.order-button::before,
+.order-button::after {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 3px;
+  position: absolute;
+  right: 12px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.order-button::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 13px;
+}
+
+.order-button::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  bottom: 13px;
 }
 /*# sourceMappingURL=style.css.map */
