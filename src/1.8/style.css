@@ -698,7 +698,8 @@
 }
 
 .brands__card-item {
-  width: 240px;
+  min-width: 240px;
+  margin-right: 16px;
   padding: 20px 16px;
   border: 1px solid #eaeaea;
   background-color: #fff;
@@ -781,8 +782,6 @@
 
 .brands__card-item {
   height: 80px !important;
-  min-width: 240px !important;
-  margin-right: 16px !important;
 }
 
 .swiper-pagination {
@@ -835,6 +834,7 @@
   }
   .brands__card-item {
     width: 32%;
+    margin-right: 0px;
     margin-bottom: 16px;
   }
   .equipments {
