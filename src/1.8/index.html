@@ -394,12 +394,39 @@
           <div class="popup-call-back">
             <div class="popup-call-back__content-wrapper">
               <p class="popup-title">Заказать звонок</p>
-              <input type="text" class="popup-call-back__input" />
-              <p class="popup-call-back__policy">
-                Нажимая “отправить”, вы даете согласие на обработку персональных данных и
-                соглашаетесь с нашей политикой конфиденциальности
-              </p>
-              <button class="close-popup-button">закрыть</button>
+              <form action="" method="post">
+                <input type="text" class="popup-input" placeholder="Телефон" />
+                <p class="popup-policy">
+                  Нажимая “отправить”, вы даете согласие на
+                  <a href="#" class="popup-policy__link">обработку персональных данных</a> и
+                  соглашаетесь с нашей
+                  <a href="#" class="popup-policy__link">политикой конфиденциальности</a>
+                </p>
+                <button class="close-popup-button button icon-close"></button>
+                <button type="submit" class="order-button popup-call-back__submit-button">
+                  Отправить
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="popup-feedback">
+            <div class="popup-feedback__content-wrapper">
+              <p class="popup-title">Заказать звонок</p>
+              <input type="text" class="popup-input" placeholder="Имя" />
+              <input type="text" class="popup-input" placeholder="Телефон" />
+              <input type="text" class="popup-input" placeholder="Электронная почта" />
+              <textarea
+                name="Text1"
+                cols="40"
+                rows="5"
+                class="feedback-message"
+                placeholder="Сообщение"
+              ></textarea>
+              <button class="close-popup-button button icon-close"></button>
+              <button type="submit" class="order-button popup-feedback__submit-button">
+                Отправить
+              </button>
             </div>
           </div>
           <script src="./cards.js"></script>
