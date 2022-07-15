@@ -33,8 +33,6 @@
 }
 
 .content {
-  // width: 100%;
-  // float: right;
   flex-basis: 100%;
   position: relative;
 }
@@ -709,17 +707,6 @@
   color: #7e7e82;
 }
 
-.equipments {
-  display: flex;
-  margin-top: 24px;
-  // gap: 32px;
-  justify-content: space-between;
-
-  &__item {
-    width: 240px;
-  }
-}
-
 .card {
   display: flex;
   justify-content: space-between;
@@ -991,13 +978,21 @@
   }
 
   .equipments {
-    gap: 2%;
     display: flex;
-    margin-bottom: 24px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 24px;
+    justify-content: space-between;
+    gap: 1%;
     &__item {
       width: 32%;
-      min-width: 240px;
+      margin-right: 0;
+      margin-bottom: 24px;
     }
+  }
+
+  .container-mobile-padding-right-none {
+    padding-right: 24px;
   }
 
   .collapse-button {
@@ -1046,7 +1041,7 @@
   .brands {
     // 1 способ подсказал парень из чата, что 3 гэпа по 2% => 94 / 4 = 23.5% не очень удобно считать каждый раз. Гридом похоже проще. С ними не работал, но походу надо изучить
     justify-content: flex-start;
-    gap: 2%;
+    gap: 1.5%;
 
     // 2 способ (тоже подсказал парень из чата)
     // display: grid;
@@ -1062,6 +1057,31 @@
       // margin-bottom: 16px;
     }
   }
+
+  .equipments {
+    &__item {
+      width: 24%;
+      margin-right: 0;
+      margin-bottom: 24px;
+    }
+  }
+
+  // .equipments {
+  //   display: flex;
+  //   gap: 1%;
+  //   margin-top: 24px;
+  //   flex-wrap: wrap;
+
+  //   &__item {
+  //     // width: 23.5%;
+  //     margin-bottom: 32px;
+  //     // width: 100px;
+  //     max-width: 23.5%;
+  //     // background-color: blue;
+  //     // max-width: 150px;
+  //     // background-color: red;
+  //   }
+  // }
 }
 
 // table
