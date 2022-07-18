@@ -24,7 +24,7 @@
 
 .body {
   min-height: 100vh;
-  background-color: #f8f8f8;
+  background-color: #f2f2f2;
   font-family: 'TTLakes-Medium';
   letter-spacing: -0.2px;
 }
@@ -52,6 +52,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   top: 0;
+  z-index: 2;
 }
 
 .sidebar__header {
@@ -67,16 +68,13 @@
           align-items: center;
 }
 
-.icon-close {
-  margin-right: 16px;
-}
-
 .icon-search-sidebar {
   margin-left: auto;
   margin-right: 0 !important;
 }
 
 .icon-close {
+  margin-right: 16px;
   background: url("../../assets/icons/icon-close.svg") no-repeat no-repeat center center #ff3e79;
 }
 
@@ -99,16 +97,16 @@
   margin-bottom: 20px;
 }
 
-.menu__link:hover,
-.menu__link--active {
+.menu__link:hover, .menu__link--active {
   color: #7e7e82;
 }
 
 .menu__link--active::before {
   content: '';
   background-color: #41f6d7;
-  width: 5px;
+  width: 3px;
   height: 32px;
+  border-radius: 3px;
   position: absolute;
   left: 0;
   margin-top: -5px;
@@ -483,8 +481,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 80px;
-  margin-bottom: 25px;
+  padding-top: 80px;
+  padding-bottom: 25px;
 }
 
 .footer__text {
@@ -523,6 +521,9 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .page {
+    background-color: #f8f8f8;
   }
   .icon-phone,
   .icon-message,
@@ -603,7 +604,6 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    margin-top: 80px;
     margin-bottom: 25px;
   }
   .footer__text {
@@ -631,6 +631,9 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: #f8f8f8;
   }
   .header {
     display: none;
@@ -885,6 +888,7 @@
 }
 
 .popup-call-back {
+  border: 1px solid blue;
   position: fixed;
   width: 100vw;
   height: 100vh;
@@ -984,6 +988,7 @@
   height: 100%;
   width: 100%;
   background: rgba(255, 255, 255, 0.96);
+  z-index: 3;
   display: none;
 }
 
