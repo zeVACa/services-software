@@ -45,9 +45,15 @@ burgerButtons.forEach((btn) => {
 let popupCallbackBackground = document.querySelector('.popup-call-back');
 
 popupCallbackBackground.addEventListener('click', (e) => {
-  console.log('Клик по области попапа');
+  if (e.target.classList.contains('popup-call-back')) {
+    callBackPopup.style.display = 'none';
+  }
 });
 
-// window.onclick = (e) => {
-//   if (e.trarget = )
-// };
+let popupFeedbackBackground = document.querySelector('.popup-feedback');
+
+popupFeedbackBackground.addEventListener('click', (e) => {
+  if (e.target.classList.contains('popup-feedback')) {
+    feedbackPopup.style.display = 'none';
+  }
+});
