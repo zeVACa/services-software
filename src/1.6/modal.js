@@ -73,3 +73,12 @@ popupFeedbackBackground.addEventListener('click', (e) => {
     enableScroll();
   }
 });
+
+sidebar.addEventListener('click', (e) => {
+  if (e.target.classList.contains('sidebar')) {
+    sidebar.style.display = 'none';
+    enableScroll();
+  }
+
+  console.log(e.target);
+});
