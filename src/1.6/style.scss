@@ -37,19 +37,6 @@
   position: relative;
 }
 
-// .sidebar {
-//   position: sticky;
-//   background-color: #fff;
-//   width: 320px;
-//   height: 100vh;
-//   // padding: 19px 24px 32px;
-
-//   display: none;
-//   flex-direction: column;
-//   top: 0;
-//   z-index: 5;
-// }
-
 .sidebar {
   z-index: 5;
   position: absolute;
@@ -718,6 +705,11 @@
     position: sticky;
     background: transparent;
     box-shadow: none;
+    z-index: 1;
+
+    .icon-close {
+      display: none;
+    }
   }
 
   .sidebar-content-wrapper {
@@ -967,8 +959,10 @@
   height: 100%;
   width: 100%;
   background: rgba(255, 255, 255, 0.96);
-  z-index: 3;
-  display: none;
+  transition: all 1s ease;
+  // display: none;
+  z-index: -1;
+  opacity: 0;
 
   &__content-wrapper {
     box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
@@ -982,6 +976,9 @@
     z-index: 1020;
     right: 0;
     min-width: 440px;
+
+    transition: all 1s ease;
+    transform: translate(120%);
   }
 }
 
@@ -1098,23 +1095,6 @@
       margin-bottom: 24px;
     }
   }
-
-  // .equipments {
-  //   display: flex;
-  //   gap: 1%;
-  //   margin-top: 24px;
-  //   flex-wrap: wrap;
-
-  //   &__item {
-  //     // width: 23.5%;
-  //     margin-bottom: 32px;
-  //     // width: 100px;
-  //     max-width: 23.5%;
-  //     // background-color: blue;
-  //     // max-width: 150px;
-  //     // background-color: red;
-  //   }
-  // }
 }
 
 // table

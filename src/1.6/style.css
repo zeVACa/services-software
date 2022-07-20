@@ -729,6 +729,10 @@
     background: transparent;
     -webkit-box-shadow: none;
             box-shadow: none;
+    z-index: 1;
+  }
+  .sidebar .icon-close {
+    display: none;
   }
   .sidebar-content-wrapper {
     -webkit-box-shadow: none;
@@ -1009,8 +1013,10 @@
   height: 100%;
   width: 100%;
   background: rgba(255, 255, 255, 0.96);
-  z-index: 3;
-  display: none;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  z-index: -1;
+  opacity: 0;
 }
 
 .popup-feedback__content-wrapper {
@@ -1031,6 +1037,10 @@
   z-index: 1020;
   right: 0;
   min-width: 440px;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  -webkit-transform: translate(120%);
+          transform: translate(120%);
 }
 
 .feedback-message {
