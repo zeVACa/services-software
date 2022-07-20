@@ -1,6 +1,5 @@
 // phone button
 
-let callBackPopup = document.querySelector('.popup-call-back');
 let feedbackPopup = document.querySelector('.popup-feedback');
 let phoneButtons = document.querySelectorAll('.icon-phone');
 let feedbackButtons = document.querySelectorAll('.icon-message');
@@ -16,11 +15,33 @@ let enableScroll = () => {
   document.body.classList.remove('disable-scroll');
 };
 
+// callback
+
+let callBackPopup = document.querySelector('.popup-call-back');
+let callBackContentWrapper = document.querySelector('.popup-call-back__content-wrapper');
+
 phoneButtons.forEach((btn) => {
   btn.addEventListener('click', (e) => {
-    callBackPopup.style.display = 'block';
+    // callBackPopup.style.display = 'block';
+    callBackPopup.style.opacity = '1';
+    callBackPopup.style.zIndex = '100';
+    callBackContentWrapper.style.transform = 'translate(0%)';
+
     disableScroll();
   });
+});
+
+let popupCallbackBackground = document.querySelector('.popup-call-back');
+
+popupCallbackBackground.addEventListener('click', (e) => {
+  if (e.target.classList.contains('popup-call-back')) {
+    // callBackPopup.style.display = 'none';
+
+    callBackPopup.style.opacity = '0';
+    callBackPopup.style.zIndex = '-100';
+    callBackContentWrapper.style.transform = 'translate(120%)';
+    enableScroll();
+  }
 });
 
 // feedback
@@ -60,15 +81,6 @@ burgerButtons.forEach((btn) => {
   });
 });
 
-let popupCallbackBackground = document.querySelector('.popup-call-back');
-
-popupCallbackBackground.addEventListener('click', (e) => {
-  if (e.target.classList.contains('popup-call-back')) {
-    callBackPopup.style.display = 'none';
-    enableScroll();
-  }
-});
-
 sidebar.addEventListener('click', (e) => {
   if (e.target.classList.contains('sidebar')) {
     sidebar.style.display = 'none';
@@ -82,13 +94,13 @@ let closePopupButtons = document.querySelectorAll('.icon-close');
 
 closePopupButtons.forEach((btn) => {
   btn.addEventListener('click', (e) => {
-    // feedbackPopup.style.display = 'none';
-
     feedbackPopup.style.opacity = '0';
     feedbackPopup.style.zIndex = '-100';
     feedbackContentWrapper.style.transform = 'translate(120%)';
 
-    callBackPopup.style.display = 'none';
+    callBackPopup.style.opacity = '0';
+    callBackPopup.style.zIndex = '-100';
+    callBackContentWrapper.style.transform = 'translate(120%)';
 
     if (window.innerWidth <= 1420) {
       sidebar.style.display = 'none';
