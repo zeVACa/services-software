@@ -47,7 +47,10 @@
   top: 0;
   left: 0;
   background-color: rgba(255, 255, 255, 0.96);
-  display: none;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+  opacity: 0.5;
+  z-index: -100;
 }
 
 .sidebar-content-wrapper {
@@ -69,6 +72,10 @@
   padding: 24px;
   -webkit-box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
           box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
+  -webkit-transform: translate(-100%);
+          transform: translate(-100%);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 .sidebar__header {
@@ -729,7 +736,8 @@
     background: transparent;
     -webkit-box-shadow: none;
             box-shadow: none;
-    z-index: 1;
+    z-index: 100;
+    opacity: 1;
   }
   .sidebar .icon-close {
     display: none;
@@ -739,6 +747,8 @@
             box-shadow: none;
     background: transparent;
     background-color: #fff;
+    -webkit-transform: translate(0%);
+            transform: translate(0%);
   }
 }
 

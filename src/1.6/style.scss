@@ -45,7 +45,11 @@
   top: 0;
   left: 0;
   background-color: rgba($color: #fff, $alpha: 0.96);
-  display: none;
+  // display: none;
+
+  transition: all 1s ease;
+  opacity: 0.5;
+  z-index: -100;
 }
 
 .sidebar-content-wrapper {
@@ -61,6 +65,9 @@
   flex-direction: column;
   padding: 24px;
   box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
+
+  transform: translate(-100%);
+  transition: all 1s ease;
 }
 
 .sidebar__header {
@@ -705,7 +712,8 @@
     position: sticky;
     background: transparent;
     box-shadow: none;
-    z-index: 1;
+    z-index: 100;
+    opacity: 1;
 
     .icon-close {
       display: none;
@@ -717,6 +725,7 @@
     box-shadow: none;
     background: transparent;
     background-color: #fff;
+    transform: translate(0%);
   }
 }
 

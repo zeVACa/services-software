@@ -74,16 +74,25 @@ popupFeedbackBackground.addEventListener('click', (e) => {
 
 // sidebar
 
+let sidebarContentWrapper = document.querySelector('.sidebar-content-wrapper');
+
 burgerButtons.forEach((btn) => {
   btn.addEventListener('click', (e) => {
-    sidebar.style.display = 'flex';
+    // sidebar.style.display = 'flex';
+    sidebar.style.zIndex = '100';
+    sidebar.style.opacity = '1';
+    sidebarContentWrapper.style.transform = 'translate(0%)';
+
     disableScroll();
   });
 });
 
 sidebar.addEventListener('click', (e) => {
   if (e.target.classList.contains('sidebar')) {
-    sidebar.style.display = 'none';
+    // sidebar.style.display = 'none';
+    sidebar.style.zIndex = '-100';
+    sidebar.style.opacity = '0';
+    sidebarContentWrapper.style.transform = 'translate(-120%)';
     enableScroll();
   }
 });
@@ -103,8 +112,12 @@ closePopupButtons.forEach((btn) => {
     callBackContentWrapper.style.transform = 'translate(120%)';
 
     if (window.innerWidth <= 1420) {
-      sidebar.style.display = 'none';
-      sidebar.style.position = 'fixed';
+      // sidebar.style.display = 'none';
+      // sidebar.style.position = 'fixed';
+
+      sidebar.style.zIndex = '-100';
+      sidebar.style.opacity = '0';
+      sidebarContentWrapper.style.transform = 'translate(-120%)';
     }
 
     enableScroll();
