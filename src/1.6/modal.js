@@ -111,6 +111,8 @@ closePopupButtons.forEach((btn) => {
     callBackPopup.style.zIndex = '-100';
     callBackContentWrapper.style.transform = 'translate(120%)';
 
+    sidebar.style.zIndex = '-100';
+
     if (window.innerWidth <= 1420) {
       // sidebar.style.display = 'none';
       // sidebar.style.position = 'fixed';
