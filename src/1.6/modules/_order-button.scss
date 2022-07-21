@@ -1,0 +1,44 @@
+.order-button {
+  background-color: #ff3e79;
+  border: none;
+  padding: 8px 12px;
+  color: #fff;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 16px;
+  width: 100%;
+  min-width: 85px;
+  max-width: 136px;
+  height: 34px;
+  font-family: 'TTLakes-Medium';
+  font-weight: bold;
+  text-align: left;
+  position: relative;
+}
+
+.order-button:hover {
+  transition: 0.5s;
+  background-color: darken($color: #ff3e79, $amount: 15%);
+}
+
+.order-button::before,
+.order-button::after {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 3px;
+  position: absolute;
+  right: 12px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.order-button::before {
+  transform: rotate(45deg);
+  top: 13px;
+}
+
+.order-button::after {
+  transform: rotate(-45deg);
+  bottom: 13px;
+}
